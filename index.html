@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="styles-main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./resources/icons/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./resources/icons/favicon.ico" type="image/x-icon">
+        <meta name="description" content="The invention of GC Enterprises, Trading It Off, 
+        is a one-stop shop for very effective and sometimes inexpensive beauty and body
+        products. Its main purpose is to improve beauty, body, and the health state of 
+        viewers via a special payment plan. Other interesting products are 
+        available. 'Trading It Off, Looking hot, Money for bods, the One-Stop-Shop.'
+        BREAST HOOTERS BOOB IMPLANTS INSERTS MUSCLE BUILDING HEALTH MEDICINE
+         OMNITRON TOXITRON MAGIC WAND
+        OPERATIONS QUICK FIXES COVERAGE INSURANCE SHOPPING FINANCIAL ELECTRONICS REPAIR">
+        <meta property="og:image" content="images/GC site logo-final.png">
+        <meta property="og:description" content="The invention of GC Enterprises, Trading It Off, 
+        is a one-stop shop for very effective and sometimes inexpensive beauty and body
+        products. Its main purpose is to improve beauty, body, and the health state of 
+        viewers via a special payment plan. Other interesting products are 
+        available.">
+        <meta property="og:title" content="Trading It Off - Heaven's Resources">
+        <title>Trading Off - Easy Access to Heaven's Resources</title>
+    </head>
+    <body>
+    <php>
+        <nav>
+            <a href="http://love-madly.com"> <img class="title-left" src="images/GC site logo-tiny.png" alt="Logo"></a>
+            <div class="title-middle">Trading Off Money for an Enhanced Life</div>
+            <div id="rt-nav">                       
+                <div id="menu-nav-toggle-responsive">
+                    <!-- "Button" and block to Trigger/Open The Menu -->
+                        <div class="pdroll" onmouseover="rollmenu()" onblur="unrollmenu()">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        </div>
+                </div>
+            </div>
+            <div id="rt-full-nav"></div>
+                <div id="pdmenu-nav-toggle-responsive">
+                    <!---Button to Trigger a Modal that Falls and Darkens the Background-->
+                    <div id="myBtn">Prices $</div>
+                    
+                    <!-- "Button" to Trigger/Open The Menu -->
+                    <div class="pd" onmouseover="showmenu()" onmouseout="hidemenu()">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="images/hamburger.png"  class="title-right" alt="" id="hamburger">
+                    </div>
+                    <ul class="pdmenu">
+                        <li><a href="index.html">Trading Off home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a  href="contentpage1.html">Beauty Treatments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a  href="contentpage2.html">Body Enhancements&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a  href="contentpage3.html">Medical Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a  href="contentpage4.html">Miscellaneous Services&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <div id="roll">
+            <img src="images/hamburger.png"  class="title-right" alt="" id="hamburger">
+            <ul class="menuroll">
+                <li><a href="index.html">Trading Off home</a></li>
+                <li><a href="contentpage1.html">Beauty Treatments</a></li>
+                <li><a href="contentpage2.html">Body Enhancements</a></li>
+                <li><a href="contentpage3.html">Medical Services&</a></li>
+                <li><a href="contentpage4.html">Miscellaneous Services</a></li>
+            </ul>
+        </div>
+
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Favorite Services and Prices</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Prices in 2020 US Dollars</p>
+                            <span class="bold-text">Fountain of Youth Anti-aging:</span> $300 per treatment<br>
+                            <span class="bold-text">Mammarific boobs:</span> $55 per half cup <span class="italic-text">Boobessence!</span><br>
+                            <span class="bold-text">OMNITRON(tm) Health Button:</span> $50 per permanent installation<br>
+                            <span class="bold-text">Cure to STD's:</span> $40 per treatment<br>
+                            <span class="bold-text">Immediate emergency relief, bullet hole closing, Tumor down, Single brain cell repair:</span> Free!<br>
+                            <span class="bold-text">Magic Wand(tm): Immediate anti-bacterial and anti-virus treatment:</span> $10 per 10 passes<br>
+                            <span class="bold-text">Bigger butt, sexy legs, curved hip with muscle, for women only $2000 per treatment</span><br>
+                            <span class="bold-text">Building and chiseling of specific muscle groups, e.g. the pectorals:</span> $1000 per group<br>
+                            <span class="bold-text">MUCH MORE IN OUR TOPIC PAGES!</span>
+                            <p></p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+<script>
+    function showmenu() {
+        let pdmenu = document.getElementsByClassName("pdmenu")
+        pdmenu[0].style.clip= "auto"
+        pdmenu[0].style.opacity= "1"
+        pdmenu[0].style.transform= "translateY(0) scaleY(1)"
+        pdmenu[0].style.zIndex= "1"
+        document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
+        document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
+        document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
+        document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
+    }
+    function hidemenu() {
+        let pdmenu = document.getElementsByClassName("pdmenu")
+        pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)"
+        pdmenu[0].style.opacity= "0.0"
+        pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)"
+        pdmenu[0].style.zIndex= "-1"
+        document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
+        document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
+        document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
+        document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
+    }
+
+    function rollmenu() {
+        var roll = document.getElementById("menuroll");  
+        roll.style.clip= "auto"
+        roll.style.transform= "translateY(0) scaleY(1)"
+        roll.style.zIndex= "1"
+        roll.style.maxHeight= "100%";
+    }
+
+    function unrollmenu() {
+        var roll = document.getElementById("menuroll");
+        roll.style.clip= "rect(1px, 1px, 1px, 1px)"
+        roll.style.transform= "translateY(-10px) scaleY(0.5)"
+        roll.style.zIndex= "-1"
+        roll.style.maxHeight = "0";
+    }
+
+        // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    btn.onmouseover = function() {
+      btn.style.color = "yellow";
+      btn.style.cursor="pointer";
+    }
+
+    btn.onmouseout = function() {
+        btn.style.color= "white";
+        btn.style.cursor="auto";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+</script>
+
+        <div class="top-bg">
+            <div class="header">
+                Trading Off for a good life
+            </div>
+            <div class="subheader">
+                The Official Promotion Site for <span style="color: white;">Heaven's</span> Services
+            </div>
+        </div>
+
+
+
+
+    <div class="links-container">
+        <div class="divide1">
+            <a href="contentpage1.html" class="link1">
+                <div >
+                    <p >
+                        Beauty Improvement</p>
+                    <p ><img class="button-style" src="images/Try!.png" alt="Try Beauty Services"></p>
+                </div>
+            </a>
+            <div class="right-side1">
+                <p class="sm-line-height">What are we on Earth for? Why not exchange our paper money for flesh and beauty improvement?</p>
+                <p class="sm-line-height">This is the theme of this site. You can have *almost* anything for your body and brain, at <span style="font-style: italic">fantastic</span> prices!</p>
+            </div>
+        </div>
+
+        <div class="divide2">
+            <a href="contentpage2.html" class="link2">
+                <div>
+                    <p >
+                        Body Improvement</p>
+                    <p><img class="button-style" src="images/Do It!.png" alt="Look at body and muscle improvement"></p>
+                </div>
+            </a>
+                <div class="right-side2">
+                    <p class="sm-line-height">Beat the chase. Steam up your life. Make that point. What is the point? Body refinement to the max.</p>
+                    <p class="sm-line-height">Without the boob operations or workouts. Such fantastic outcomes just for money! Maximize Your Chances.</p>
+                </div>
+        </div>
+
+        <div class="divide3">
+            <a href="contentpage3.html" class="link3">
+                <div>
+                    <p >Medical products and help</p>
+                    <p><img class="button-style" src="images/I Need It!.png" alt="I Need Medical Support"></p>
+                </div>
+            </a>
+            <div class="right-side3">
+                <p class="sm-line-height">If you need it, we might have it. Most of our amazing, miraculous medical services are surprisingly affordable.</p>
+                <p class="sm-line-height">Do you want a STD cured? You got it. You need a cancer removed? Done by a Top Doctor. Check these many fixes out.</p>
+            </div>
+        </div>
+
+        <div class="divide4">
+            <a href="contentpage4.html" class="link4">
+                <div>
+                    <p >Financial Wizardry and Other Great Services</p>
+                    <p ><img class="button-style" src="images/I Feel Great.png" alt=""></p>
+                </div>
+            </a>
+            <div class="right-side4">
+                <p class="sm-line-height">&quot;I need some advice! My financial life is in danger!&quot; You've come to the right place.</p>
+                <p class="sm-line-height">&quot;I need constant help shopping for exact items for a long time!&quot;</p>
+            </div>
+        </div>
+
+        <section>
+            <div class="GC-logo">
+                <a href="https://love-madly.com" ><img src="images/GC site logo-final-small.png" alt="GC logo"></a>
+            </div>
+            <div class="weird">
+                We at GC Enterprises are a registered not-for-profit charitable organization dedicated to
+                improving people's beauty, health, and prosperity. We have very attractive products
+                and services that cannot be found anywhere else. For example, REAL anti-aging,
+                <span style="font-style: italic;">Mammarific</span> mammary gland inserts, and tooth enamel repair. Take
+                a nice, long look!
+            </div>
+        </section>
+    </div>
+    </php>
+    </body>
+</html>
+

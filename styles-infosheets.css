@@ -1,0 +1,283 @@
+
+nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position:fixed;
+    max-width: 97vw;
+    width: 100%;
+    height: 2.5rem;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    top:0;
+    background-color: black;
+}
+#hamburger{
+    width: 30px;
+    height: 30px;
+    padding-top: 0px;
+    margin: 0;
+}
+.title-left{
+    height: 30px;
+    width: 40px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+.title-middle{
+    height: 40px;
+    color: white;
+    padding-top: .5rem;
+}
+#rt-prices{
+    margin-top: 0.3rem;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#myBtn{
+    font-size: 1.5rem;
+    color: white;
+    line-height: 1.5rem;
+}
+
+.divider{
+    max-width: 50rem;
+    height: .77rem;
+    background-image: url('images/blue-divider.png');
+    background-repeat: no-repeat;
+}
+
+.title-right{
+    cursor:pointer;
+    line-height: 1.5rem;
+}
+/* Sub-menu styles*/
+.pdmenu {
+  /* These are the key CSS properties to create the effect*/
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0.1;
+  transition: transform 0.1s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+  transform: translateY(-10px) scaleY(0.0);
+  transform-origin: top;
+
+  /* Typical sub-menu styling*/
+  box-shadow: 0px 5px 5px 5px rgba(0,0,0, 0.3);
+  margin: 0;
+  padding: .75rem;
+  background-color: rgb(225,225,255);
+  color: blue;
+  position: absolute;
+  border-radius:0.6rem;
+  top: 100%;
+  right: 0;
+  width: 13rem;
+  z-index: -1;
+
+  list-style:none;
+  text-decoration: none;
+}
+
+.pdmenu > li{
+    list-style:none;
+    text-decoration: none;
+}
+.pdmenu > li > a:link{
+    color: #0000FF;
+    text-decoration:none;
+}
+.pdmenu > li > a:visited{
+    list-style:none;
+    text-decoration: none;
+    color: blue;
+}
+.pdmenu > li > a:hover{
+    list-style:none;
+    color:rgb(255,100,255);
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion1 {
+    background-color: rgb(247, 192, 174);
+    color: 0;
+    cursor: pointer;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: space-between;
+    padding: 1rem;
+  }
+.accordion1 > h2 {
+    width: 90%;
+}
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion1:hover {
+    background-color: rgb(248, 155, 124);
+  }
+
+  .accordion1::after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    
+    padding-top: 1rem;
+  }
+  
+  .active::after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+.panel1 {
+    padding: 0 1.125rem;
+    background-color: rgb(245,215,205);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion2 {
+    background-color: rgb(175, 175, 255);
+    color: 0;
+    cursor: pointer;
+    padding-top: 1;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: space-between;
+    padding: 1rem;
+  }
+
+.accordion2 > h2 {
+    width: 90%;
+}
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active2, .accordion2:hover {
+    background-color:rgb(150, 150, 255);
+  }
+
+.accordion2::after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    
+    padding-top: 1rem;
+  }
+  
+  .active2::after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+.panel2 {
+    padding: 0 1.125rem;
+    background-color: rgb(200, 200, 255);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+li{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+p{
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.0rem;
+}
+
+.top-border{
+    padding-top: 2rem;
+}
+
+.bold-text{
+    font-weight:bold;
+}
+.italic-text{
+    font-style: italic;
+    font-weight: bold;
+}
+.centered-text{
+    margin: auto;
+}
+
+.blockmenuitems{
+    display: block;
+}
+
+.background2{
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    max-width: 50rem;
+    border-radius: 10px;
+    background-color:rgb(225,225,255);
+}
+.background{
+    margin-top:1rem;
+    margin-bottom:1rem;
+    padding: 1rem;
+    background-color: rgb(245,215,205);
+    max-width: 50rem;
+    border-radius: 10px;
+}
+.diagram{
+    max-width: 50rem;
+    width: 50rem;
+    height: 3.125rem;
+    background-image: url("images/Mammarific Diagrams.jpg");
+}
+
+.order-form{
+    display: block;
+    margin: 0;
+    max-width: 50rem;
+    background-color: white;
+}
+
+#color-white{
+    background-color: white;
+}
+
+.bloopers{
+    margin-top: 1rem;
+    padding: 1rem;
+    display: block;
+    margin-top: 0;
+    max-width: 50rem;
+    background-color: rgb(255,180,180);
+    border-radius: 10px;
+}
+/*Antonin J. will look at my site.
+san-lancer-38@paramount.com*/
+
+@media only screen and (max-width: 800px){
+    .background1{
+        max-width: 37rem;
+    }
+    .background2{
+        max-width: 37rem;
+    }
+
+}
