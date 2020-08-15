@@ -44,7 +44,9 @@ nav{
     font-size: 1.4rem;
 }
 
-
+.five-spaces{
+    display: block;
+}
 
 .links-container{
     margin: 2rem 0 2rem 1rem;
@@ -489,12 +491,8 @@ li{
         display: none;
     }
 */    
-    #menu-nav-toggle-responsive{
-        display: block;
-    }
-    
-    #pdmenu-nav-toggle-responsive{
-        display: none;
+    .nav{
+        max-width: 100%;
     }
     .title-middle{
         height: 40px;
@@ -502,13 +500,14 @@ li{
         font-size: 1rem;
         padding-top: .25rem;
     }
-    .title-right{
+    #myBtn{
         font-size: 1rem;
-        padding-top: .25rem;
+        padding-top: 0rem;
         cursor:pointer;
-        line-height: 0rem;
     }
-    
+    .five-spaces{
+        display: none;
+    }
     .menuroll{
         display: none;
     }
@@ -520,7 +519,6 @@ li{
         font-size: 2.2rem;
         font-weight: 700;
         max-width: 30rem;
-        width: 30rem;
         text-shadow: 3px #000000;
     }
 
@@ -539,14 +537,15 @@ li{
     .link1{
         border-top-left-radius:30px;
         border-top-right-radius:30px;  
-        max-width: 37rem;
+        max-width: 80vw;
     }
     .right-side1{
         border-bottom-left-radius:30px;
         border-bottom-right-radius:30px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 37rem;
+        max-width: 80vw;
+        width: 100%;
     }
 
     .divide2{
@@ -558,14 +557,15 @@ li{
         border-top-left-radius:30px;
         border-top-right-radius:30px;  
         margin-top: 2rem;
-        max-width: 37rem;
+        max-width: 80vw;
     }
     .right-side2{
         border-bottom-left-radius:30px;
         border-bottom-right-radius:30px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 37rem;
+        max-width: 80vw;
+        width: 100%;
     }
     
     .blockmenuitems{
@@ -581,14 +581,15 @@ li{
         border-top-left-radius:30px;
         border-top-right-radius:30px;  
         margin-top: 2rem;
-        max-width: 37rem;
+        max-width: 80vw;
     }
     .right-side3{
         border-bottom-left-radius:30px;
         border-bottom-right-radius:30px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 37rem;
+        max-width: 80vw;
+        width: 100%;
     }
     
     .divide4{
@@ -602,14 +603,15 @@ li{
         border-bottom-left-radius:0;
         border-bottom-right-radius:0;
         margin-top: 2rem;
-        max-width: 37rem;
+        max-width: 80vw;
     }
     .right-side4{
         border-bottom-left-radius:30px;
         border-bottom-right-radius:30px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 37rem;
+        max-width: 80vw;
+        width: 100%;
     }
 }
 2080 lines for TRADING OFF V1
