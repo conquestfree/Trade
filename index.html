@@ -25,13 +25,13 @@
         <title>Trading Off - Easy Access to Heaven's Resources</title>
     </head>
     <body>
-    <php>
+    <php><!--
         <nav>
             <a href="http://love-madly.com"> <img class="title-left" src="images/GC site logo-tiny.png" alt="Logo"></a>
             <div class="title-middle">Trading Off Money for an Enhanced Life</div>
             <div id="rt-nav">                       
-                <div id="menu-nav-toggle-responsive">
-                    <!-- "Button" and block to Trigger/Open The Menu -->
+                <div id="menu-btn-toggle-responsive">
+                     "Button" and block to Trigger/Open The Menu
                         <div class="pdroll" onmouseover="rollmenu()" onblur="unrollmenu()">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -39,11 +39,11 @@
                 </div>
             </div>
             <div id="rt-full-nav"></div>
-                <div id="pdmenu-nav-toggle-responsive">
-                    <!---Button to Trigger a Modal that Falls and Darkens the Background-->
+                <div id="pdmenu-nav-toggle-desktop">
+                    Button to Trigger a Modal that Falls and Darkens the Background
                     <div id="myBtn">Prices $</div>
                     
-                    <!-- "Button" to Trigger/Open The Menu -->
+                     "Button" to Trigger/Open The Menu
                     <div class="pd" onmouseover="showmenu()" onmouseout="hidemenu()">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <img src="images/hamburger.png"  class="title-right" alt="" id="hamburger">
@@ -59,18 +59,29 @@
                 </div>
             </div>
 
-        </nav>
-        <div id="roll">
-            <img src="images/hamburger.png"  class="title-right" alt="" id="hamburger">
-            <ul class="menuroll">
-                <li><a href="index.html">Trading Off home</a></li>
-                <li><a href="contentpage1.html">Beauty Treatments</a></li>
-                <li><a href="contentpage2.html">Body Enhancements</a></li>
-                <li><a href="contentpage3.html">Medical Services&</a></li>
-                <li><a href="contentpage4.html">Miscellaneous Services</a></li>
-            </ul>
-        </div>
+        </nav>        -->
+        <nav>
+            <!--<div class="menu">-->
+                <a href="index.html"><img class="title-left" src="images/GC site logo-tiny.png" alt="Logo"></a>
+                <div class="title-middle">Trading Off For a Good Life</div>
+                <div id="rt-prices">
+                    <!---Button to Trigger a Modal that Falls and Darkens the Background-->
+                    <div id="myBtn">Prices $</div>
 
+                    <!-- "Button" to Trigger/Open The Menu -->
+                    <div class="pd" onmouseover="showmenu()" onmouseout="hidemenu()">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="images/hamburger.png" class="title-right" alt="" id="hamburger">
+                        <ul class="pdmenu">
+                            <li ><a  href="index.html">Trading Off home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                            <li ><a  href="contentpage1.html">Beauty Treatments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                            <li ><a  href="contentpage2.html">Body Enhancements&nbsp;&nbsp;&nbsp;</a></li>
+                            <li ><a  href="contentpage3.html">Medical Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                            <li ><a  href="contentpage4.html">Miscellaneous Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
 
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
@@ -99,45 +110,35 @@
                 </div>
 
 
-<script>
-    function showmenu() {
-        let pdmenu = document.getElementsByClassName("pdmenu")
-        pdmenu[0].style.clip= "auto"
-        pdmenu[0].style.opacity= "1"
-        pdmenu[0].style.transform= "translateY(0) scaleY(1)"
-        pdmenu[0].style.zIndex= "1"
-        document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
-        document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
-        document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
-        document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
-    }
-    function hidemenu() {
-        let pdmenu = document.getElementsByClassName("pdmenu")
-        pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)"
-        pdmenu[0].style.opacity= "0.0"
-        pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)"
-        pdmenu[0].style.zIndex= "-1"
-        document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
-        document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
-        document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
-        document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
-    }
 
-    function rollmenu() {
-        var roll = document.getElementById("menuroll");  
-        roll.style.clip= "auto"
-        roll.style.transform= "translateY(0) scaleY(1)"
-        roll.style.zIndex= "1"
-        roll.style.maxHeight= "100%";
-    }
+        <script>
+            hamburgerMenu = document.querySelector("pd");
+            menuOpen = false;
 
-    function unrollmenu() {
-        var roll = document.getElementById("menuroll");
-        roll.style.clip= "rect(1px, 1px, 1px, 1px)"
-        roll.style.transform= "translateY(-10px) scaleY(0.5)"
-        roll.style.zIndex= "-1"
-        roll.style.maxHeight = "0";
-    }
+            pd.addEventListener("click", function() {
+                if (menuOpen){
+                    hidemenu();
+                    menuOpen=false;
+                } else {
+                    showmenu();
+                    menuOpen=true;
+                }
+            })
+
+            function showmenu() {
+                let pdmenu = document.getElementsByClassName("pdmenu")
+                pdmenu[0].style.clip= "auto"
+                pdmenu[0].style.opacity= "1"
+                pdmenu[0].style.transform= "translateY(0) scaleY(1)"
+                pdmenu[0].style.zIndex= "1"
+            }
+            function hidemenu() {
+                let pdmenu = document.getElementsByClassName("pdmenu")
+                pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)"
+                pdmenu[0].style.opacity= "0.0"
+                pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)"
+                pdmenu[0].style.zIndex= "-1"
+            }
 
         // Get the modal
     var modal = document.getElementById("myModal");
