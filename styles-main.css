@@ -501,8 +501,23 @@ li{
         display: none;
     }
 
+    .header{
+        margin: 3.5rem 0 0 1rem;
+        padding-top: 2rem;
+        font-family: 'Helvetica', sans-serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        width: 78%;
+        max-width: 37rem;
+        text-shadow: 3px #000000;
+    }
+
+    .subheader{
+        margin: 2rem 0 0 1rem;
+    }
+
     .top-bg{
-        max-width: 39rem;
+        max-width: 37rem;
         width: 100%;
     }
     .divide1{
