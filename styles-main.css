@@ -518,7 +518,7 @@ li{
         font-family: 'Helvetica', sans-serif;
         font-size: 2.2rem;
         font-weight: 700;
-        max-width: 30rem;
+        max-width: 85vw;
         width: 100%;
         text-shadow: 3px #000000;
     }
@@ -528,7 +528,7 @@ li{
     }
 
     .top-bg{
-        max-width: 30rem;
+        max-width: 85vw;
         width: 100%;
     }
     .divide1{
@@ -539,7 +539,7 @@ li{
     .link1{
         border-top-left-radius:30px;
         border-top-right-radius:30px;  
-        max-width: 80vw;
+        max-width: 85vw;
         width: 100%;
     }
     .right-side1{
@@ -547,7 +547,7 @@ li{
         border-bottom-right-radius:30px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 80vw;
+        max-width: 85vw;
         width: 100%;
     }
 
@@ -560,7 +560,7 @@ li{
         border-top-left-radius:30px;
         border-top-right-radius:30px;  
         margin-top: 2rem;
-        max-width: 80vw;
+        max-width: 85vw;
         width: 100%;
     }
     .right-side2{
@@ -568,7 +568,7 @@ li{
         border-bottom-right-radius:30px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 80vw;
+        max-width: 85vw;
         width: 100%;
     }
     
@@ -585,7 +585,7 @@ li{
         border-top-left-radius:30px;
         border-top-right-radius:30px;  
         margin-top: 2rem;
-        max-width: 80vw;
+        max-width: 85vw;
         width: 100%;
     }
     .right-side3{
@@ -593,7 +593,7 @@ li{
         border-bottom-right-radius:30px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 80vw;
+        max-width: 85vw;
         width: 100%;
     }
     
@@ -608,7 +608,7 @@ li{
         border-bottom-left-radius:0;
         border-bottom-right-radius:0;
         margin-top: 2rem;
-        max-width: 80vw;
+        max-width: 85vw;
         width: 100%;
     }
     .right-side4{
@@ -616,7 +616,7 @@ li{
         border-bottom-right-radius:30px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 80vw;
+        max-width: 85vw;
         width: 100%;
     }
 }
