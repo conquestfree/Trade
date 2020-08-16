@@ -62,7 +62,7 @@
         </nav>        -->
         <nav>
             <!--<div class="menu">-->
-            <div id="pdmenubackground">
+
                 <a href="index.html"><img class="title-left" src="images/GC site logo-tiny.png" alt="Logo"></a>
                 <div class="title-middle">Trading Off For a Good Life</div>
                 <div id="rt-prices">
@@ -81,10 +81,11 @@
                             <li ><a  href="contentpage4.html">Miscellaneous Services</a></li>
                         </ul>
                     </div>
-                </div>
+                
             </div>
         </nav>
-
+                <!--Menu background for clicking on Safari-->
+                <div id="pdmenubackground">
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
 
@@ -110,6 +111,7 @@
                     </div>
 
                 </div>
+                </div>
 
 
 
@@ -129,17 +131,18 @@
             });
 
             function showmenu() {
+                window.onclick = function(event) {
+                    if (event.target == backgr) {
+                        backgr.style.display = "block";
+                        backgr.style.zIndex = 2;
+                    }
+                }
                 let pdmenu = document.getElementsByClassName("pdmenu")
                 pdmenu[0].style.clip= "auto"
                 pdmenu[0].style.opacity= "1"
                 pdmenu[0].style.transform= "translateY(0) scaleY(1)"
                 pdmenu[0].style.zIndex= "2"
                 backgr.style.display = block
-                window.onclick = function(event) {
-                    if (event.target == backgr) {
-                        backgr.style.display = "block";
-                    }
-                }
             }
             function hidemenu() {
                 let pdmenu = document.getElementsByClassName("pdmenu")
@@ -150,6 +153,7 @@
                 window.onclick = function(event) {
                     if (event.target == backgr) {
                         backgr.style.display = "none";
+                        backgr.style.zIndex = 2;
                     }
                 }
             }
