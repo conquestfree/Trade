@@ -7,19 +7,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="./resources/icons/favicon.ico" type="image/x-icon">
         <link rel="icon" href="./resources/icons/favicon.ico" type="image/x-icon">
-        <meta name="description" content="The invention of GC Enterprises, Trading It Off, 
-        is a one-stop shop for very effective and sometimes inexpensive beauty and body
+        <meta name="description" content="The innovation of GC Enterprises, Trading It Off, 
+        is that it is a one-stop shop for miraculous beauty, body, and health
         products. Its main purpose is to improve beauty, body, and the health state of 
-        viewers via a special payment plan. Other interesting products are 
-        available. 'Trading It Off, Looking hot, Money for bods, the One-Stop-Shop.'
+        viewers via special payment plans. Other interesting products are 
+        also available. Trading It Off, Looking hot, Money for bod, the One-Stop-Shop.
         BREAST HOOTERS BOOB IMPLANTS INSERTS MUSCLE BUILDING HEALTH MEDICINE
          OMNITRON TOXITRON MAGIC WAND
         OPERATIONS QUICK FIXES COVERAGE INSURANCE SHOPPING FINANCIAL ELECTRONICS REPAIR">
         <meta property="og:image" content="images/GC site logo-final.png">
-        <meta property="og:description" content="The invention of GC Enterprises, Trading It Off, 
-        is a one-stop shop for very effective and sometimes inexpensive beauty and body
+        <meta property="og:description" content="The innovation of GC Enterprises, Trading It Off, 
+        is that it is a one-stop shop for miraculous beauty, body, and health
         products. Its main purpose is to improve beauty, body, and the health state of 
-        viewers via a special payment plan. Other interesting products are 
+        viewers via special payment plans. Other interesting products are also 
         available.">
         <meta property="og:title" content="Trading It Off - Heaven's Resources">
         <title>Trading Off - Easy Access to Heaven's Resources</title>
@@ -62,6 +62,7 @@
         </nav>        -->
         <nav>
             <!--<div class="menu">-->
+            <div id="pdmenubackground">
                 <a href="index.html"><img class="title-left" src="images/GC site logo-tiny.png" alt="Logo"></a>
                 <div class="title-middle">Trading Off For a Good Life</div>
                 <div id="rt-prices">
@@ -81,6 +82,7 @@
                         </ul>
                     </div>
                 </div>
+            </div>
         </nav>
 
                 <!-- The Modal -->
@@ -114,7 +116,7 @@
         <script>
             hamburgerMenu = document.querySelector("pd");
             menuOpen = false;
-            backgr = document.getElementById("pdmenubackground")
+            backgr = document.getElementById("pdmenubackground");
 
             pd.addEventListener("click", function() {
                 if (menuOpen){
@@ -131,8 +133,13 @@
                 pdmenu[0].style.clip= "auto"
                 pdmenu[0].style.opacity= "1"
                 pdmenu[0].style.transform= "translateY(0) scaleY(1)"
-                pdmenu[0].style.zIndex= "1"
+                pdmenu[0].style.zIndex= "2"
                 backgr.style.display = block
+                window.onclick = function(event) {
+                    if (event.target == backgr) {
+                        backgr.style.display = "block";
+                    }
+                }
             }
             function hidemenu() {
                 let pdmenu = document.getElementsByClassName("pdmenu")
@@ -176,11 +183,17 @@
       modal.style.display = "none";
     }
 
+    //When the user clicks on menu button, show the transparent background to catch close-click
+
+
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        if (event.target == backgr) {
+            backgr.style.display = "none";
+        }
     }
 
 </script>
