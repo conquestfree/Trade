@@ -565,7 +565,7 @@ li{
     .link1{
         border-top-left-radius:10px;
         border-top-right-radius:10px;  
-        max-width: 85vw;
+        max-width: 84vw;
         width: 100%;
     }
     .right-side1{
@@ -573,7 +573,7 @@ li{
         border-bottom-right-radius:10px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 85vw;
+        max-width: 84vw;
         width: 100%;
     }
 
@@ -586,7 +586,7 @@ li{
         border-top-left-radius:10px;
         border-top-right-radius:10px;  
         margin-top: 2rem;
-        max-width: 85vw;
+        max-width: 84vw;
         width: 100%;
     }
     .right-side2{
@@ -594,7 +594,7 @@ li{
         border-bottom-right-radius:10px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 85vw;
+        max-width: 84vw;
         width: 100%;
     }
     
@@ -611,7 +611,7 @@ li{
         border-top-left-radius:10px;
         border-top-right-radius:10px;  
         margin-top: 2rem;
-        max-width: 85vw;
+        max-width: 84vw;
         width: 100%;
     }
     .right-side3{
@@ -619,7 +619,7 @@ li{
         border-bottom-right-radius:10px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 85vw;
+        max-width: 84vw;
         width: 100%;
     }
     
@@ -634,7 +634,7 @@ li{
         border-bottom-left-radius:0;
         border-bottom-right-radius:0;
         margin-top: 2rem;
-        max-width: 85vw;
+        max-width: 84vw;
         width: 100%;
     }
     .right-side4{
@@ -642,7 +642,7 @@ li{
         border-bottom-right-radius:10px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
-        max-width: 85vw;
+        max-width: 84vw;
         width: 100%;
     }
 }
