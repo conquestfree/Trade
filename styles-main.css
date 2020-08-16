@@ -366,6 +366,18 @@ nav{
     list-style:none;
     color:rgb(255,100,255);
 }
+.pdmenubackground {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.0); /* Black w/ opacity */
+}
+
 li{
     font-size: 1.2rem;
     line-height: 1.5rem;
@@ -484,13 +496,12 @@ li{
     color: white;
     margin-top: 0.2rem;
 }
-
+.five-spaces{
+    display: inline;
+}
 
 @media only screen and (max-width: 800px){
-/*    #rt-prices{
-        display: none;
-    }
-*/    
+   
     .nav{
         max-width: 100%;
     }
@@ -500,6 +511,7 @@ li{
         font-size: 1rem;
         padding-top: .25rem;
     }
+    
     #myBtn{
         font-size: 1rem;
         padding-top: 0rem;
@@ -512,6 +524,11 @@ li{
         display: none;
     }
 
+    .top-bg{
+        max-width: 91vw;
+        width:100%;
+    }
+
     .header{
         margin: 5rem 0 0 1rem;
         padding-top: 2rem;
@@ -519,7 +536,7 @@ li{
         font-family: 'Helvetica', sans-serif;
         font-size: 2.0rem;
         font-weight: 700;
-        max-width: 80%;
+        max-width: 100%;
         width: 100%;
         text-shadow: 3px #000000;
     }
@@ -528,24 +545,32 @@ li{
         margin: 2rem 0 0 1rem;
     }
 
-    .top-bg{
-        max-width: 95%;
-        width:100%;
+    .pdmenubackground {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0,0,0,0.0); /* Black w/ opacity */
     }
+
     .divide1{
         display: flex;
         flex-flow: column wrap;
         justify-content: space-between;
     }
     .link1{
-        border-top-left-radius:30px;
-        border-top-right-radius:30px;  
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;  
         max-width: 85vw;
         width: 100%;
     }
     .right-side1{
-        border-bottom-left-radius:30px;
-        border-bottom-right-radius:30px; 
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
         max-width: 85vw;
@@ -558,15 +583,15 @@ li{
         justify-content: space-between;
     }
     .link2{
-        border-top-left-radius:30px;
-        border-top-right-radius:30px;  
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;  
         margin-top: 2rem;
         max-width: 85vw;
         width: 100%;
     }
     .right-side2{
-        border-bottom-left-radius:30px;
-        border-bottom-right-radius:30px; 
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
         max-width: 85vw;
@@ -583,15 +608,15 @@ li{
         justify-content: space-between;
     }
     .link3{
-        border-top-left-radius:30px;
-        border-top-right-radius:30px;  
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;  
         margin-top: 2rem;
         max-width: 85vw;
         width: 100%;
     }
     .right-side3{
-        border-bottom-left-radius:30px;
-        border-bottom-right-radius:30px; 
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
         max-width: 85vw;
@@ -604,8 +629,8 @@ li{
         justify-content: space-between;
     }
     .link4{
-        border-top-left-radius:30px;
-        border-top-right-radius:30px; 
+        border-top-left-radius:10px;
+        border-top-right-radius:10px; 
         border-bottom-left-radius:0;
         border-bottom-right-radius:0;
         margin-top: 2rem;
@@ -613,8 +638,8 @@ li{
         width: 100%;
     }
     .right-side4{
-        border-bottom-left-radius:30px;
-        border-bottom-right-radius:30px; 
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px; 
         border-top-left-radius:0;
         border-top-right-radius:0; 
         max-width: 85vw;
