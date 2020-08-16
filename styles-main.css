@@ -536,16 +536,17 @@ li{
         font-family: 'Helvetica', sans-serif;
         font-size: 2.0rem;
         font-weight: 700;
-        max-width: 100%;
+        max-width: 91vw%;
         width: 100%;
         text-shadow: 3px #000000;
+        overflow: auto;
     }
 
     .subheader{
         margin: 2rem 0 0 1rem;
     }
 
-    .pdmenubackground {
+    #pdmenubackground {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
         z-index: 1; /* Sit on top */
