@@ -146,13 +146,13 @@
                 pdmenu[0].style.zIndex= "-1"
             }
 
-            window.onclick = function(event) {
-                if (event.target == backgr) {
-                    backgr.style.display = "none";
-                    backgr.style.zIndex = -1;
-                }
-            }
+//            window.onclick = function(event) {
+  //              if (event.target == backgr) {
+    //                backgr.style.display = "none";
 
+      //          }
+        //    }
+        
         // Get the modal
     var modal = document.getElementById("myModal");
 
@@ -192,6 +192,7 @@
         }
         if (event.target == backgr) {
             backgr.style.display = "none";
+            backgr.style.zIndex = -1;
         }
     }
 
