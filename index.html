@@ -144,11 +144,12 @@
                 pdmenu[0].style.opacity= "0.0"
                 pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)"
                 pdmenu[0].style.zIndex= "-1"
-                window.onclick = function(event) {
-                    if (event.target == backgr) {
-                        backgr.style.display = "none";
-                        backgr.style.zIndex = -1;
-                    }
+            }
+
+            window.onclick = function(event) {
+                if (event.target == backgr) {
+                    backgr.style.display = "none";
+                    backgr.style.zIndex = -1;
                 }
             }
 
