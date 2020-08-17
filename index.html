@@ -130,18 +130,13 @@
             });
 
             function showmenu() {
-                window.onclick = function(event) {
-                    if (event.target == backgr) {
-                        backgr.style.display = "block";
-                        backgr.style.zIndex = 2;
-                    }
-                }
+                backgr.style.display = "block";
+                backgr.style.zIndex = 1;
                 let pdmenu = document.getElementsByClassName("pdmenu")
                 pdmenu[0].style.clip= "auto"
                 pdmenu[0].style.opacity= "1"
                 pdmenu[0].style.transform= "translateY(0) scaleY(1)"
                 pdmenu[0].style.zIndex= "2"
-                backgr.style.display = block
             }
             function hidemenu() {
                 let pdmenu = document.getElementsByClassName("pdmenu")
@@ -152,7 +147,7 @@
                 window.onclick = function(event) {
                     if (event.target == backgr) {
                         backgr.style.display = "none";
-                        backgr.style.zIndex = 2;
+                        backgr.style.zIndex = -1;
                     }
                 }
             }

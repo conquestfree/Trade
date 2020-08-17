@@ -24,7 +24,7 @@ nav{
     margin: 3.5rem 0 0 1rem;
     border-radius: 10px;
     height: 238px;
-    max-width: 98vw;
+    max-width: 800px;
     width: 100%;
 }
 
@@ -35,7 +35,7 @@ nav{
     font-size: 2.2rem;
     font-weight: 700;
     width: 78%;
-    max-width: 98vw;
+    max-width: 800px;
     text-shadow: 3px #000000;
 }
 
@@ -56,7 +56,7 @@ nav{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    max-width: 98vw;
+    max-width: 800px;
     width: 100%;
 }
 
@@ -98,7 +98,7 @@ nav{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    max-width: 98vw;
+    max-width: 800px;
     width: 100%;
 }
 
@@ -135,7 +135,7 @@ nav{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    max-width: 98vw;
+    max-width: 800px;
     width: 100%;
 }
 
@@ -170,7 +170,7 @@ nav{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    max-width: 98vw;
+    max-width: 800px;
     width: 100%;
 }
 
@@ -363,7 +363,7 @@ nav{
     color:rgb(255,100,255);
 }
 .pdmenubackground {
-    display: none; /* Hidden by default */
+    display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -371,7 +371,7 @@ nav{
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.0); /* Black w/ opacity */
+    background-color: rgba(148, 58, 58, 1.0); /* Black w/ opacity */
 }
 
 li{
