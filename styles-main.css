@@ -24,7 +24,7 @@ nav{
     margin: 3.5rem 0 0 1rem;
     border-radius: 10px;
     height: 238px;
-    max-width: 800px;
+    max-width: 98vw;
     width: 100%;
 }
 
@@ -35,7 +35,7 @@ nav{
     font-size: 2.2rem;
     font-weight: 700;
     width: 78%;
-    max-width: 800px;
+    max-width: 98vw;
     text-shadow: 3px #000000;
 }
 
@@ -56,8 +56,7 @@ nav{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    min-width: 800px;
-    max-width: 800px;
+    max-width: 98vw;
     width: 100%;
 }
 
@@ -99,8 +98,7 @@ nav{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    min-width: 800px;
-    max-width: 800px;
+    max-width: 98vw;
     width: 100%;
 }
 
@@ -137,8 +135,7 @@ nav{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    max-width: 800px;
-    min-width: 800px;
+    max-width: 98vw;
     width: 100%;
 }
 
@@ -173,8 +170,7 @@ nav{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    max-width: 800px;
-    min-width: 800px;
+    max-width: 98vw;
     width: 100%;
 }
 
@@ -454,7 +450,7 @@ li{
   border: .6rem solid yellow;
   border-radius: 5px;
   width: 30rem;
-  height: 28.8rem;
+  height: 30rem;
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
