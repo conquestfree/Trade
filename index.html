@@ -60,6 +60,10 @@
             </div>
 
         </nav>        -->
+
+        <!--Menu background for clicking on Safari-->
+        <div class="pdmenubackground"></div>
+        </div>
         <nav>
             <!--<div class="menu">-->
 
@@ -70,7 +74,7 @@
                     <div id="myBtn">Prices $</div>
 
                     <!-- "Button" to Trigger/Open The Menu -->
-                    <div class="pd" onmouseover="showmenu()" onmouseout="hidemenu()">
+                    <div class="pd" onmouseover="showmenu()" onclick="showmenu()" onmouseout="hidemenu()">
                         <span class="five-spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         <img src="images/hamburger.png" class="title-right" alt="" id="hamburger">
                         <ul class="pdmenu">
@@ -83,8 +87,8 @@
                     </div>
                 </div>
         </nav>
-                <!--Menu background for clicking on Safari-->
-                <div id="pdmenubackground">
+
+
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
 
@@ -110,40 +114,42 @@
                     </div>
 
                 </div>
-                </div>
+
 
 
 
         <script>
-            hamburgerMenu = document.querySelector("pd");
-            menuOpen = false;
-            backgr = document.getElementById("pdmenubackground");
+            var hamburgerMenu = document.querySelector("pd");
+            var menuOpen = false;
+            var backgr = document.querySelector("pdmenubackground");
 
-            pd.addEventListener("click", function() {
+            hamburgerMenu.addEventListener("click", function() {
                 if (menuOpen){
+                    menuOpen = false;
                     hidemenu();
-                    menuOpen=false;
                 } else {
+                    menuOpen = true;
                     showmenu();
-                    menuOpen=true;
                 }
             });
 
             function showmenu() {
+                let pdmenu = document.getElementsByClassName("pdmenu");
+                pdmenu[0].style.clip= "auto";
+                pdmenu[0].style.opacity= "1";
+                pdmenu[0].style.transform= "translateY(0) scaleY(1)";
+                pdmenu[0].style.zIndex= "2";
                 backgr.style.display = "block";
-                backgr.style.zIndex = 1;
-                let pdmenu = document.getElementsByClassName("pdmenu")
-                pdmenu[0].style.clip= "auto"
-                pdmenu[0].style.opacity= "1"
-                pdmenu[0].style.transform= "translateY(0) scaleY(1)"
-                pdmenu[0].style.zIndex= "2"
+                backgr.style.zIndex = "1";
             }
             function hidemenu() {
-                let pdmenu = document.getElementsByClassName("pdmenu")
-                pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)"
-                pdmenu[0].style.opacity= "0.0"
-                pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)"
-                pdmenu[0].style.zIndex= "-1"
+                let pdmenu = document.getElementsByClassName("pdmenu");
+                pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)";
+                pdmenu[0].style.opacity= "0.0";
+                pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)";
+                pdmenu[0].style.zIndex= "-1";
+                backgr.style.display = "none";
+                backgr.style.zIndex = "-2"; 
             }
 
 //            window.onclick = function(event) {
@@ -158,14 +164,15 @@
 
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
+     
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    var span = document.querySelector("close");
 
     // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
+//    btn.onclick = function() {
+//      modal.style.display = "block";
+//    }
 
     btn.onmouseover = function() {
       btn.style.color = "yellow";
@@ -187,13 +194,16 @@
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-        if (event.target == backgr) {
+        ev = event.target;
+        if (ev == backgr) {
             backgr.style.display = "none";
             backgr.style.zIndex = -1;
+            hidemenu();
         }
+        if (ev == modal) {
+            modal.style.display = "none";
+        }
+
     }
 
 </script>
