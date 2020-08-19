@@ -71,7 +71,7 @@
                 <div class="title-middle">Trading Off For a Good Life</div>
                 <div id="rt-prices">
                     <!---Button to Trigger a Modal that Falls and Darkens the Background-->
-                    <div id="myBtn">Prices $</div>
+                    <div id="myBtn" onclick="showModal()">Prices $</div>
 
                     <!-- "Button" to Trigger/Open The Menu -->
                     <div class="pd" onmouseover="showmenu()" onclick="showmenu()" onmouseout="hidemenu()">
@@ -123,6 +123,7 @@
             var menuOpen = false;
             var backgr = document.querySelector("pdmenubackground");
 
+            // specially click on hamburger button on mobile devices
             hamburgerMenu.addEventListener("click", function() {
                 if (menuOpen){
                     menuOpen = false;
@@ -140,7 +141,7 @@
                 pdmenu[0].style.transform= "translateY(0) scaleY(1)";
                 pdmenu[0].style.zIndex= "2";
                 backgr.style.display = "block";
-                backgr.style.zIndex = "1";
+                backgr.style.zIndex = "2";
             }
             function hidemenu() {
                 let pdmenu = document.getElementsByClassName("pdmenu");
@@ -149,7 +150,7 @@
                 pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)";
                 pdmenu[0].style.zIndex= "-1";
                 backgr.style.display = "none";
-                backgr.style.zIndex = "-2"; 
+                backgr.style.zIndex = "1"; 
             }
 
 //            window.onclick = function(event) {
@@ -169,6 +170,8 @@
     // Get the <span> element that closes the modal
     var span = document.querySelector("close");
 
+    var modalOn = false;
+
     // When the user clicks on the button, open the modal
 //    btn.onclick = function() {
 //      modal.style.display = "block";
@@ -184,6 +187,19 @@
         btn.style.cursor="auto";
     }
 
+    btn.onclick = function() {
+        modal.style.display = "block";
+        modal.style.zIndex = "2";
+        modalOn = true;
+    }
+
+    function showModal() {
+        modal.style.display = "block";
+        modal.style.zIndex = "2";
+        modalOn = true;
+    }
+
+
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
       modal.style.display = "none";
@@ -193,16 +209,20 @@
 
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        ev = event.target;
-        if (ev == backgr) {
-            backgr.style.display = "none";
-            backgr.style.zIndex = -1;
-            hidemenu();
+    //if (modalOn) { 
+        if (window.onclick = function(event) {
+            var ev = event.target;
+            if (ev == backgr) {
+                hidemenu();
+                backgr.style.display = "none";
+                backgr.style.zIndex = -1;
+
+            }
+            if (ev == modal) {
+                modal.style.display = "none";
+            }
         }
-        if (ev == modal) {
-            modal.style.display = "none";
-        }
+    //}
 
     }
 
