@@ -73,7 +73,7 @@
                     <div id="myBtn" onclick="showModal()">Prices $</div>
 
                     <!-- "Button" to Trigger/Open The Menu -->
-                    <div class="pd">
+                    <div class="pd" onmouseover="showmenu()" onmouseout="hidemenu()">
                         <div class="five-spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                         <img src="images/hamburger.png" class="title-right" alt="" id="hamburger">
                         <ul class="pdmenu">
@@ -85,9 +85,9 @@
                         </ul>
                     </div>
                 </div>
-
+                <div class="pdmenubackground"></div>
         </nav>
-        <div class="pdmenubackground"></div>
+
 
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
@@ -131,25 +131,25 @@
                 }
             });
     
-            hamburgerMenu.addEventListener("mouseout", function() {
+            hamburgerMenu.addEventListener("onmouseout", function() {
                 hidemenu();
                 menuOpen = false;
             });
     
-            hamburgerMenu.addEventListener("mouseover", function() {
+            hamburgerMenu.addEventListener("onmouseover", function() {
                 showmenu();
                 menuOpen = true;
             });
     
     
             function showmenu() {
+                backgr.style.display = "block";
+                backgr.style.zIndex = "2";                
                 let pdmenu = document.getElementsByClassName("pdmenu");
                 pdmenu[0].style.clip= "auto";
                 pdmenu[0].style.opacity= "1";
                 pdmenu[0].style.transform= "translateY(0) scaleY(1)";
-                pdmenu[0].style.zIndex= "500";
-                backgr.style.display = "block";
-                backgr.style.zIndex = "2";  
+                pdmenu[0].style.zIndex= "3";
             }
             function hidemenu() {
                 let pdmenu = document.getElementsByClassName("pdmenu");
