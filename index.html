@@ -63,7 +63,7 @@
 
         <!--Menu background for clicking on Safari-->
 
-
+        <div class="pdmenubackground">
         <nav>
 
                 <a href="index.html"><img class="title-left" src="images/GC site logo-tiny.png" alt="Logo"></a>
@@ -87,7 +87,7 @@
                 </div>
 
         </nav>
-        <div class="pdmenubackground"></div>
+    </div>
 
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
@@ -133,6 +133,9 @@
     
             hamburgerMenu.addEventListener("mouseout", function() {
                 hidemenu();
+                menuOpen = false;
+                backgr.style.display = "none";
+                backgr.style.zIndex = -2;
                 menuOpen = false;
             });
     
