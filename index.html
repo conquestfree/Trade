@@ -63,7 +63,7 @@
 
         <!--Menu background for clicking on Safari-->
 
-        <div class="pdmenubackground">
+        
         <nav>
 
                 <a href="index.html"><img class="title-left" src="images/GC site logo-tiny.png" alt="Logo"></a>
@@ -87,7 +87,7 @@
                 </div>
 
         </nav>
-    </div>
+        <div class="pdmenubackground"></div>
 
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
@@ -131,17 +131,18 @@
                 }
             });
     
-            hamburgerMenu.addEventListener("mouseout", function() {
+            hamburgerMenu.addEventListener("mouseleave", function() {
                 hidemenu();
                 menuOpen = false;
                 backgr.style.display = "none";
                 backgr.style.zIndex = -2;
-                menuOpen = false;
             });
     
-            hamburgerMenu.addEventListener("mouseover", function() {
+            hamburgerMenu.addEventListener("mouseenter", function() {
                 showmenu();
                 menuOpen = true;
+                backgr.style.display = "block";
+                backgr.style.zIndex = 500;
             });
     
     
@@ -188,12 +189,12 @@
             //      modal.style.display = "block";
             //    }
             
-            btn.addEventListener("mouseover", function() {
+            btn.addEventListener("mouseenter", function() {
               btn.style.color = "yellow";
               btn.style.cursor="pointer";
             });
             
-            btn.addEventListener("mouseout",  function() {
+            btn.addEventListener("mouseleave",  function() {
                 btn.style.color= "white";
                 btn.style.cursor="auto";
             });
