@@ -169,16 +169,16 @@
                 //    }
                 
                 // Get the modal
-            let modal = document.getElementById("myModal");
+            var modal = document.getElementById("myModal");
             
             // Get the button that opens the modal
-            let btn = document.getElementById("myBtn");
+            var btn = document.getElementById("myBtn");
              
             
             // Get the <span> element that closes the modal
-            let span = document.getElementsByClassName("close")[0];
+            var span = document.getElementsByClassName("close")[0];
             
-            let modalOn = false;
+            var modalOn = false;
             
             // When the user clicks on the button, open the modal
             //    btn.onclick = function() {
@@ -217,20 +217,22 @@
             
             
             // When the user clicks anywhere outside of the modal, close it
-            //if (modalOn) { 
+            if (modalOn || menuOpen) { 
                 window.addEventListener("click", function(event) {
                     var ev = event.target;
                     if (ev == backgr) {
                         hidemenu();
                         backgr.style.display = "none";
                         backgr.style.zIndex = -2;
+                        menuOpen = false;
                     }
                     if (ev == modal) {
                         modal.style.display = "none";
                         modal.style.zIndex = -3;
+                        modalOn = false;
                     }
                 });
-            //}
+            }
             
             
             
