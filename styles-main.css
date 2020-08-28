@@ -1,3 +1,5 @@
+@import url('./images/BalooTamma2-Regular.ttf');
+
 body{
     margin:0;
     padding:0;
@@ -41,8 +43,9 @@ nav{
 }
 
 .subheader{
-    margin: 2rem 0 2rem 2rem;
+    margin: 2rem 0 2rem 1rem;
     font-size: 1.4rem;
+    font-family: 'BalooTamma2-Regular', sans-serif;
 }
 
 .five-spaces{
@@ -322,6 +325,9 @@ nav{
 .pd{
 
 }
+.five-spaces{
+    display: inline;
+}
 
 /* Sub-menu styles*/
 .pdmenu {
@@ -340,7 +346,7 @@ nav{
   color: blue;
   font-family: 'Helvetica', sans-serif;
   position: absolute;
-  border-radius:5px;
+  border-radius:0.6rem;
   top: 100%;
   right: 0;
   width: 15rem;
@@ -351,7 +357,8 @@ nav{
     list-style:none;
     text-decoration: none;
 }
-.pdmenu > li > a{
+.pdmenu > li > a:link{
+    color: #0000FF;
     text-decoration:none;
 }
 .pdmenu > li > a:visited{
@@ -366,7 +373,7 @@ nav{
 .pdmenubackground {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: -1; /* Sit on top */
+    z-index: -2; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -548,6 +555,8 @@ li{
 
     .subheader{
         margin: 2rem 0 0 1rem;
+        font-size: 1.0rem;
+        font-family: 'BalooTamma2-Regular', sans-serif;
     }
 
     #pdmenubackground {

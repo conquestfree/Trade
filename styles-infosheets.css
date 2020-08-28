@@ -53,6 +53,12 @@ nav{
     cursor:pointer;
     line-height: 1.5rem;
 }
+
+
+.five-spaces{
+    display: inline;
+}
+
 /* Sub-menu styles*/
 .pdmenu {
   /* These are the key CSS properties to create the effect*/
@@ -68,11 +74,12 @@ nav{
   padding: .75rem;
   background-color: rgb(225,225,255);
   color: blue;
+  font-family: 'Helvetica', sans-serif;
   position: absolute;
   border-radius:0.6rem;
   top: 100%;
   right: 0;
-  width: 13rem;
+  width: 15rem;
   z-index: -1;
 
   list-style:none;

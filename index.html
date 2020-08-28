@@ -5,8 +5,8 @@
         <link rel="stylesheet" type="text/css" href="reset.css">
         <link rel="stylesheet" type="text/css" href="styles-main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="./resources/icons/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="./resources/icons/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="./images/GC site logo-final-tiny.png" type="image/x-icon">
+        <link rel="icon" href="./images/GC site logo-final-tiny.png" type="image/x-icon">
         <meta name="description" content="The innovation of GC Enterprises, Trading It Off, 
         is that it is a one-stop shop for miraculous beauty, body, and health
         products. Its main purpose is to improve beauty, body, and the health state of 
@@ -65,7 +65,6 @@
 
 
         <nav>
-            <!--<div class="menu">-->
 
                 <a href="index.html"><img class="title-left" src="images/GC site logo-tiny.png" alt="Logo"></a>
                 <div class="title-middle">Trading Off For a Good Life</div>
@@ -75,7 +74,7 @@
 
                     <!-- "Button" to Trigger/Open The Menu -->
                     <div class="pd">
-                        <span class="five-spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <div class="five-spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                         <img src="images/hamburger.png" class="title-right" alt="" id="hamburger">
                         <ul class="pdmenu">
                             <li ><a  href="index.html">Trading Off home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
@@ -86,9 +85,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="pdmenubackground"></div>
-        </nav>
 
+        </nav>
+        <div class="pdmenubackground"></div>
 
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
@@ -116,14 +115,11 @@
 
                 </div>
 
-
-
-
         <script>
             var hamburgerMenu = document.getElementsByClassName("pd")[0];
             var menuOpen = false;
             var backgr = document.querySelector("pdmenubackground");
-
+    
             //specially click on hamburger button on mobile devices
             hamburgerMenu.addEventListener("click", function() {
                 if (menuOpen){
@@ -134,26 +130,26 @@
                     showmenu();
                 }
             });
-
-            hamburgerMenu.addEventListener("onmouseout", function() {
+    
+            hamburgerMenu.addEventListener("mouseout", function() {
                 hidemenu();
                 menuOpen = false;
             });
-
-            hamburgerMenu.addEventListener("onmouseover", function() {
+    
+            hamburgerMenu.addEventListener("mouseover", function() {
                 showmenu();
                 menuOpen = true;
             });
-
-
+    
+    
             function showmenu() {
                 let pdmenu = document.getElementsByClassName("pdmenu");
                 pdmenu[0].style.clip= "auto";
                 pdmenu[0].style.opacity= "1";
                 pdmenu[0].style.transform= "translateY(0) scaleY(1)";
-                pdmenu[0].style.zIndex= "3";
+                pdmenu[0].style.zIndex= "500";
                 backgr.style.display = "block";
-                backgr.style.zIndex = "2";
+                backgr.style.zIndex = "2";  
             }
             function hidemenu() {
                 let pdmenu = document.getElementsByClassName("pdmenu");
@@ -164,81 +160,81 @@
                 backgr.style.display = "none";
                 backgr.style.zIndex = "-2"; 
             }
-
-//            window.onclick = function(event) {
-  //              if (event.target == backgr) {
-    //                backgr.style.display = "none";
-
-      //          }
-        //    }
-        
-        // Get the modal
-    let modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    let btn = document.getElementById("myBtn");
-     
-
-    // Get the <span> element that closes the modal
-    let span = document.querySelector("close");
-
-    let modalOn = false;
-
-    // When the user clicks on the button, open the modal
-//    btn.onclick = function() {
-//      modal.style.display = "block";
-//    }
-
-btn.addEventListener("mouseover", function() {
-      btn.style.color = "yellow";
-      btn.style.cursor="pointer";
-    }
-
-    btn.addEventListener("mouseout",  function() {
-        btn.style.color= "white";
-        btn.style.cursor="auto";
-    }
-
-    btn.addEventListener("click", function() {
-        modal.style.display = "block";
-        modal.style.zIndex = "4";
-        modalOn = true;
-    }
-
-    function showModal() {
-        modal.style.display = "block";
-        modal.style.zIndex = "4";
-        modalOn = true;
-    }
-
-
-    // When the user clicks on <span> (x), close the modal
-    span.addEventListener("click", function() {
-      modal.style.display = "none";
-    }
-
-    //When the user clicks on menu button, show the transparent background to catch close-click
-
-
-    // When the user clicks anywhere outside of the modal, close it
-    //if (modalOn) { 
-        window.addEventListener("click", function(event) {
-            var ev = event.target;
-            if (ev == backgr) {
-                hidemenu();
-                backgr.style.display = "none";
-                backgr.style.zIndex = -2;
+            
+            //            window.onclick = function(event) {
+            //              if (event.target == backgr) {
+            //                backgr.style.display = "none";
+            
+              //          }
+                //    }
+                
+                // Get the modal
+            let modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            let btn = document.getElementById("myBtn");
+             
+            
+            // Get the <span> element that closes the modal
+            let span = document.getElementsByClassName("close")[0];
+            
+            let modalOn = false;
+            
+            // When the user clicks on the button, open the modal
+            //    btn.onclick = function() {
+            //      modal.style.display = "block";
+            //    }
+            
+            btn.addEventListener("mouseover", function() {
+              btn.style.color = "yellow";
+              btn.style.cursor="pointer";
+            });
+            
+            btn.addEventListener("mouseout",  function() {
+                btn.style.color= "white";
+                btn.style.cursor="auto";
+            });
+            
+            btn.addEventListener("click", function() {
+                modal.style.display = "block";
+                modal.style.zIndex = "4";
+                modalOn = true;
+            });
+            
+            function showModal() {
+                modal.style.display = "block";
+                modal.style.zIndex = "4";
+                modalOn = true;
             }
-            if (ev == modal) {
-                modal.style.display = "none";
-                modal.style.zIndex = -3;
-            }
-        }
-    //}
-
-    }
-
-</script>
+            
+            
+            // When the user clicks on <span> (x), close the modal
+            span.addEventListener("click", function() {
+              modal.style.display = "none";
+            });
+            
+            //When the user clicks on menu button, show the transparent background to catch close-click
+            
+            
+            // When the user clicks anywhere outside of the modal, close it
+            //if (modalOn) { 
+                window.addEventListener("click", function(event) {
+                    var ev = event.target;
+                    if (ev == backgr) {
+                        hidemenu();
+                        backgr.style.display = "none";
+                        backgr.style.zIndex = -2;
+                    }
+                    if (ev == modal) {
+                        modal.style.display = "none";
+                        modal.style.zIndex = -3;
+                    }
+                });
+            //}
+            
+            
+            
+            </script>
 
         <div class="top-bg">
             <div class="header">
@@ -320,6 +316,7 @@ btn.addEventListener("mouseover", function() {
             </div>
         </section>
     </div>
+
     </php>
     </body>
 </html>
