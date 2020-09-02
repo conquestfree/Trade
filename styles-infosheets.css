@@ -57,6 +57,8 @@ nav{
 
 .five-spaces{
     display: inline;
+    text-align: right;
+    cursor: pointer;
 }
 
 /* Sub-menu styles*/
