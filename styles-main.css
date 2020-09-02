@@ -600,7 +600,10 @@ li{
         max-width: 84vw;
         width: 100%;
     }
-    
+    .modal-content{
+        width: 24.1rem;
+        height: 26.1rem;
+    }
     .blockmenuitems{
         display: block;
     }
