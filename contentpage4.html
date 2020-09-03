@@ -17,47 +17,79 @@
                 <div class="title-middle">Trading Off For a Good Life</div>
                 <div id="rt-prices">
                     <!-- "Button" to Trigger/Open The Menu -->
-                    <div class="pd" onmouseover="showmenu()" onmouseout="hidemenu()">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="pd">
+                        <span class="five-spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         <img src="images/hamburger.png"  class="title-right" alt="" id="hamburger">
                         <ul class="pdmenu">
                             <li ><a  href="index.html">Trading Off home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a   href="contentpage1.html">Beauty Treatments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a   href="contentpage2.html">Body Enhancements&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a   href="contentpage3.html">Medical Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                            <li ><a  href="contentpage4.html">Miscellaneous Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                            <li ><a  href="contentpage4.html">Miscellaneous Services</a></li>
                         </ul>
                     </div>
                 </div>
         </nav>
+        <div id="myModal1" class="modal"></div>   
         <script>
+            let hamburgerMenu = document.getElementsByClassName("pd")[0];
+            let menuOpen = false;
+            //var backgr = document.querySelector("pdmenubackground");
+            let backgr = document.getElementById("myModal1");
+            let bg1 = document.querySelector("background");
+
+            //specially click on hamburger button on mobile devices
+            hamburgerMenu.addEventListener("click", function() {
+                if (menuOpen===true){
+                    menuOpen = false;
+                    hidemenu();
+                } else {
+                    menuOpen = true;
+                    showmenu();
+                }
+            });
+    
+            hamburgerMenu.addEventListener("mouseout", function() {
+                if (menuOpen===true) {
+                    hidemenu();
+                }
+            });
+    
+            hamburgerMenu.addEventListener("mouseover", function() {
+                if (menuOpen===false) {
+                    showmenu();
+                }
+            });
+            
+            backgr.addEventListener("click", function() {
+                hidemenu();
+            });
+
             function showmenu() {
-                let pdmenu = document.getElementsByClassName("pdmenu")
-                pdmenu[0].style.clip= "auto"
-                pdmenu[0].style.opacity= "1"
-                pdmenu[0].style.transform= "translateY(0) scaleY(1)"
-                pdmenu[0].style.zIndex= "1"
-                document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
-                document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
-                document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
-                document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
+                backgr.style.display = "block";
+                backgr.style.zIndex = 0; 
+                let pdmenu = document.getElementsByClassName("pdmenu");
+                pdmenu[0].style.clip= "auto";
+                pdmenu[0].style.opacity= "1";
+                pdmenu[0].style.transform= "translateY(0) scaleY(1)";
+                pdmenu[0].style.zIndex= 1;
+                menuOpen=true;
             }
             function hidemenu() {
-                let pdmenu = document.getElementsByClassName("pdmenu")
-                pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)"
-                pdmenu[0].style.opacity= "0.0"
-                pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)"
-                pdmenu[0].style.zIndex= "-1"
-                document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
-                document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
-                document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
-                document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
+                let pdmenu = document.getElementsByClassName("pdmenu");
+                pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)";
+                pdmenu[0].style.opacity= "0.0";
+                pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)";
+                pdmenu[0].style.zIndex= 0;
+                backgr.style.display = "none";
+                backgr.style.zIndex = 0;
+                menuOpen=false; 
             }
+            
         </script>
         <div class="top-border"></div>
         <div class="background2">
-
-
+        <h1>Life-Enhancing Solutions</h1>
         <p>So are you ready? Some of the only things you need to get improved are:
             <ol>
                 <li>VISA, MasterCard, American Express, or Suica in Japan, that you should
@@ -74,7 +106,7 @@
 <p>
 Regarding the rules: firstly, orders can be written and processed, but not 
 finalized until you realize any change in your life. If the change is not accepted 
-at your final discretion, we will confirm that you want to get a full 98% or 99% 
+at your late discretion, we will confirm that you want to get a full 98% or 99% 
 of your money back, and will with much certainty be returned.
 </p>
 <p>
@@ -102,11 +134,12 @@ There is one good way to confirm your order:
 
 <img width="100%" height="13" src="images/blue-divider.png">
 
+<h2>Click On These Bars to Show Products and Services</h2>
         <button class="accordion2">
             <h2>Wealth Management for Freshly Rich People, and Miscellaneous Services</h2>
         </button>
         <div class="panel2">
-<p class="bold-text">Take part in Heaven's Stock Market</p>
+<!--<p class="bold-text">Take part in Heaven's Stock Market</p>
 <p>
     Buy a piece of Heaven at your convenience!
 </p>
@@ -118,7 +151,8 @@ There is one good way to confirm your order:
     but you want to maybe hold back on that heavy investing!
 </p>
 <p class="italic-text">Current share price as of 7-31-2020: USD $20 / share</p>
-<p class="italic-text">Index: 1000</p>
+<p class="italic-text">Index: 1000</p>-->
+
 <p class="bold-text">Taxation accuracy guarantee for 20 years </p>
 <p class="italic-text">USD $100</p>
 <p>No need to botch tax payments and get auditors after you: We'll account for your 
@@ -141,7 +175,7 @@ finances or not (done by pro financial professionals)</p>
 </p>
 <p class="bold-text">Reliable protection from Heaven against murder or threats against your
 life. We are able to delete computers, kill refrigerators, or even <span class="italic-text">
-steal their guns</span>! You name it, you got it! - Ultimate power god
+steal their guns</span>! You name it, you got it! - Signed, Ultimate power god
 </p>
 <p class="italic-text">USD $20/year</p>
 <p class="bold-text">Device Battery Repair
@@ -187,7 +221,7 @@ Orders to be fulfilled at the earliest possible time, assuming correctness.<br>
 Order: Shopping Support for Mom, 20 years<br>
 $300/customer<br>
 May not always resolve perfectly!<br>
-My phone for SMS: (411)555-1111<br>
+My email for follow-up: perfectlyhappy@shopping.com<br>
 Other instructions<br>
 $300.00 USD<br>
 Payable by Wells Fargo Bank Credit Card set on table under Mom's name<br>

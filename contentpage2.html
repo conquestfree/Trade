@@ -18,47 +18,80 @@
                 <div class="title-middle">Trading Off For a Good Life</div>
                 <div id="rt-prices">
                     <!-- "Button" to Trigger/Open The Menu -->
-                    <div class="pd" onmouseover="showmenu()" onmouseout="hidemenu()">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="pd">
+                        <span class="five-spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         <img src="images/hamburger.png" class="title-right" alt="" id="hamburger">
                         <ul class="pdmenu">
                             <li ><a  href="index.html">Trading Off home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a  href="contentpage1.html">Beauty Treatments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a  href="contentpage2.html">Body Enhancements&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a  href="contentpage3.html">Medical Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                            <li ><a  href="contentpage4.html">Miscellaneous Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                            <li ><a  href="contentpage4.html">Miscellaneous Services</a></li>
                         </ul>
                     </div>
                 </div>
         </nav>
+        <div id="myModal1" class="modal"></div>   
         <script>
+            let hamburgerMenu = document.getElementsByClassName("pd")[0];
+            let menuOpen = false;
+            //var backgr = document.querySelector("pdmenubackground");
+            let backgr = document.getElementById("myModal1");
+            let bg1 = document.querySelector("background");
+
+            //specially click on hamburger button on mobile devices
+            hamburgerMenu.addEventListener("click", function() {
+                if (menuOpen===true){
+                    menuOpen = false;
+                    hidemenu();
+                } else {
+                    menuOpen = true;
+                    showmenu();
+                }
+            });
+    
+            hamburgerMenu.addEventListener("mouseout", function() {
+                if (menuOpen===true) {
+                    hidemenu();
+                }
+            });
+    
+            hamburgerMenu.addEventListener("mouseover", function() {
+                if (menuOpen===false) {
+                    showmenu();
+                }
+            });
+            
+            backgr.addEventListener("click", function() {
+                hidemenu();
+            });
+
             function showmenu() {
-                let pdmenu = document.getElementsByClassName("pdmenu")
-                pdmenu[0].style.clip= "auto"
-                pdmenu[0].style.opacity= "1"
-                pdmenu[0].style.transform= "translateY(0) scaleY(1)"
-                pdmenu[0].style.zIndex= "1"
-                document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
-                document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
-                document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
-                document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
+                backgr.style.display = "block";
+                backgr.style.zIndex = 0; 
+                let pdmenu = document.getElementsByClassName("pdmenu");
+                pdmenu[0].style.clip= "auto";
+                pdmenu[0].style.opacity= "1";
+                pdmenu[0].style.transform= "translateY(0) scaleY(1)";
+                pdmenu[0].style.zIndex= 1;
+                menuOpen=true;
             }
             function hidemenu() {
-                let pdmenu = document.getElementsByClassName("pdmenu")
-                pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)"
-                pdmenu[0].style.opacity= "0.0"
-                pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)"
-                pdmenu[0].style.zIndex= "-1"
-                document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
-                document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
-                document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
-                document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
+                let pdmenu = document.getElementsByClassName("pdmenu");
+                pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)";
+                pdmenu[0].style.opacity= "0.0";
+                pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)";
+                pdmenu[0].style.zIndex= 0;
+                backgr.style.display = "none";
+                backgr.style.zIndex = 0;
+                menuOpen=false; 
             }
+            
         </script>
         <div class="top-border"></div>
         <div class="background2">
 
-<h1>Summary of Heaven's Favorite Body Improvement and Growth Products</h1>
+<h1>Summary of Body Improvement and Growth Products</h1>
 
 
 <p>Way to go! You have reached the ultimate body improvement page in the whole world.
@@ -83,7 +116,7 @@ booblifts.</p>
     <p>
     Regarding the rules: firstly, orders can be written and processed, but not 
 finalized until you realize any change in your life. If the change is not accepted 
-at your final discretion, we will confirm that you want to get a full 98% or 99% 
+at your late discretion, we will confirm that you want to get a full 98% or 99% 
 of your money back, and will with much certainty be returned.</p>
 <p>
 There is one good way to confirm your order:
@@ -108,7 +141,7 @@ There is one good way to confirm your order:
 
 <h2>Our Body-changing Services and Products</h2>
 
-
+<h2>Click On These Bars to Show Products and Services</h2>
 <button class="accordion2">
     <h2>Mammarific Mammary Gland Inserts</h2>
 </button>
@@ -293,13 +326,13 @@ WARNING TO BE PRUDENT about any of the significant physical changes you may do t
 the services on the site.<br>
 </p>
 <ul>
-<li>Look at yourself and be satisfied. Can you be satisfied with your body now?</li>
+<li>Look at yourself and be satisfied. Is your body unsatisfactory the way it is now?</li>
 <li>Would the change of body image make you uneasy? Or is it completely natural?</li>
 <li>Are you going to change your diet or eating greatly to increase, or decrease your body weight?
 <li>Would it be ok to be called a "babe" or a "hottie", or even "slut"? (In some sizes)</i>
 </ul> 
 <p>
-If the answer to these questions is all negative, then we suggest DON'T mess with your
+If the answer to these questions is all positive (YES), then we suggest DON'T mess with your
 God-given bod.
 </p>
 </div>
@@ -347,7 +380,7 @@ USD $2000/two-week treatment (Discount by $250 if you buy Mammarific Mammaries o
 Women who are interested in a nice, round and shapely butt, reformed hips, and shapely legs to 
 attract or hold on to their
 men can now get this sought-after improvement. You can be sure after ordering that your
-butt will get bigger (more muscle and fat) and <span style="italic">all that stuff</span> will generally be better 
+butt will get bigger (more muscle and fat) and <span class="italic-text">all that stuff</span> will generally be better 
 looking. A BeautyView preview will be provided before growth.
 </p>
 <p>Specify on your order form whether you would like a fatty butt or a muscular (sometimes smaller)
@@ -380,7 +413,7 @@ $1250/treatment
 </div>
 
 <button class="accordion2">
-    <h2>Sexual Body and Performance</h2>
+    <h2>Special Sexual Upgrades</h2>
 </button>
 <div class="panel2">
 <p class="bold-text">
@@ -451,9 +484,9 @@ If your man believes he is not getting as much "contact" with you up there, then
 this is the service to get. TO ORDER, WE MUST HAVE AN ORIGINAL, SIGNED CARD OR PAPER FROM BOTH
 SIDES mentioning the 1/10 inches that she wants to lose. THE SIZE CAN BE REGAINED.
 Many men howl because of their contactless sex. But if your relationship is good, this
-$300 order is quite nominal! When
-the penis is small and the vagina is too big, we can shrink your vagina breadth.
-The price is nominal!
+$300 order is pretty nominal! When
+the penis is small and the vagina is too big, we can shrink her vagina breadth.
+The price is little!
 </p>
 <p>When the girl is 5'2", the average vaginal length is 5.8" and tightness is 1.3"</p>
 <p>When the girl is 5'3", the average vaginal length is 6.0" and tightness is 1.3"</p>
@@ -466,23 +499,9 @@ The price is nominal!
 <p>When the girl is 5'10", the average vaginal length is 7.4" and tightness is 1.8"</p>
 <p>HAVE PHUN!</p>
 <p class="bold-text">
-Vagina shortening:
-</p>
-<p  class="bold-text">
-USD $300/ one full order
-</p>
 <p>
 This order is similar to the &quot;Penis Lengthening Service&quot;. Finally someone 
 will be able to &quot;fill you all up&quot;, without enlengthening his dick.
-</p>
-<p class="bold-text">
-Penis skin thickening
-</p>
-<p class="bold-text">
-USD $300/ one full order
-</p>
-<p>
-Similar to Vagina Shrinking, this order will make your skin around the penis extra fat.
 </p>
 <p class="bold-text">
 Aromatic Semen:
@@ -491,9 +510,9 @@ Aromatic Semen:
 USD $500/ one order lasting 5 years
 </p>
 <p>
-Ewww! If this is how the girl always thinks about the guy's semen and its smell, you can solve this!
+Ewww! If this is how the girl always thinks about the guy's semen and its smell, you can solve that in a flash.
 The Semen Distaste service will replace the smell component of semen with something unsmelly.
-The taste in her mouth won't change, but there is nothing much of a taste. Does not change the sperm component
+The taste in her mouth won't change, but there should be not much of a taste. Does not change the sperm component
 or motility of the sperm.
 </p>
 <img width="100%" height="13" src="images/blue-divider.png">
@@ -599,7 +618,6 @@ USD $200
     will make every bone and joint stronger while adding calcium and fixing bone damage. If you have
     a "crick" or a more serious problem even like back bone pain, you need this.
 </p>
-<img width="100%" height="13" src="images/blue-divider.png">
 <p class="bold-text">
     Body Toxins
 </p>
@@ -649,13 +667,6 @@ WOMEN'S Sex Drive and Hormone Increase
     after Menopause and can have fun with men again! Keep ordering at the end of each year!
 </p>
 <p class="bold-text">
-    White semen service
-</p>
-<p>
-    They say it's all in the balls? Well now you may whiten your cum that lands
-    on your partner's body or mouth into totally white semen.
-</p>
-<p class="bold-text">
     $150 / lifetime treatment
 </p>
 </div>
@@ -677,7 +688,7 @@ WOMEN'S Sex Drive and Hormone Increase
     $55/cups<br>
     $220/2 cups<br>
     May not always resolve perfectly!<br>
-    My phone for SMS: (411)555-1111<br>
+    My email for follow-up: thinandhappybody@email.com<br>
     Other instructions<br>
     $220.00 USD<br>
     Payable by Wells Fargo Bank Credit Card set on table under my name<br>

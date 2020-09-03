@@ -17,42 +17,75 @@
                 <div class="title-middle">Trading Off for a Good Life</div>
                 <div id="rt-prices">
                     <!-- "Button" to Trigger/Open The Menu -->
-                    <div class="pd" onmouseover="showmenu()" onmouseout="hidemenu()">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="pd">
+                        <span class="five-spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         <img src="images/hamburger.png"  class="title-right" alt="" id="hamburger">
                         <ul class="pdmenu">
                             <li ><a href="index.html">Trading Off home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a href="contentpage1.html">Beauty Treatments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a href="contentpage2.html">Body Enhancements&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a href="contentpage3.html">Medical Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                            <li ><a href="contentpage4.html">Miscellaneous Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                            <li ><a href="contentpage4.html">Miscellaneous Services</a></li>
                         </ul>
                     </div>
                 </div>
         </nav>
+        <div id="myModal1" class="modal"></div>   
         <script>
+            let hamburgerMenu = document.getElementsByClassName("pd")[0];
+            let menuOpen = false;
+            //var backgr = document.querySelector("pdmenubackground");
+            let backgr = document.getElementById("myModal1");
+            let bg1 = document.querySelector("background");
+
+            //specially click on hamburger button on mobile devices
+            hamburgerMenu.addEventListener("click", function() {
+                if (menuOpen===true){
+                    menuOpen = false;
+                    hidemenu();
+                } else {
+                    menuOpen = true;
+                    showmenu();
+                }
+            });
+    
+            hamburgerMenu.addEventListener("mouseout", function() {
+                if (menuOpen===true) {
+                    hidemenu();
+                }
+            });
+    
+            hamburgerMenu.addEventListener("mouseover", function() {
+                if (menuOpen===false) {
+                    showmenu();
+                }
+            });
+            
+            backgr.addEventListener("click", function() {
+                hidemenu();
+            });
+
             function showmenu() {
-                let pdmenu = document.getElementsByClassName("pdmenu")
-                pdmenu[0].style.clip= "auto"
-                pdmenu[0].style.opacity= "1"
-                pdmenu[0].style.transform= "translateY(0) scaleY(1)"
-                pdmenu[0].style.zIndex= "1"
-                document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
-                document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
-                document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
-                document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
+                backgr.style.display = "block";
+                backgr.style.zIndex = 0; 
+                let pdmenu = document.getElementsByClassName("pdmenu");
+                pdmenu[0].style.clip= "auto";
+                pdmenu[0].style.opacity= "1";
+                pdmenu[0].style.transform= "translateY(0) scaleY(1)";
+                pdmenu[0].style.zIndex= 1;
+                menuOpen=true;
             }
             function hidemenu() {
-                let pdmenu = document.getElementsByClassName("pdmenu")
-                pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)"
-                pdmenu[0].style.opacity= "0.0"
-                pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)"
-                pdmenu[0].style.zIndex= "-1"
-                document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
-                document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
-                document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
-                document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
+                let pdmenu = document.getElementsByClassName("pdmenu");
+                pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)";
+                pdmenu[0].style.opacity= "0.0";
+                pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)";
+                pdmenu[0].style.zIndex= 0;
+                backgr.style.display = "none";
+                backgr.style.zIndex = 0;
+                menuOpen=false; 
             }
+            
         </script>
         <div class="top-border"></div>
         <div class="background">
@@ -85,7 +118,7 @@
 <p>
 Regarding the rules: firstly, orders can be written and processed, but not 
 finalized until you realize any change in your life. If the change is not accepted 
-at your final discretion, we will confirm that you want to get a full 98% or 99% 
+at your late discretion, we will confirm that you want to get a full 98% or 99% 
 of your money back, and will with much certainty be returned.
 </p>
 <p>
@@ -114,31 +147,33 @@ irreversibly with disabling illnesses and can't get better. But for illness we a
  Some seriously sick people, if taken care
 of very well and with enough courage, can last many years and even make surprising recoveries
 that are not as uncommon as you think. So why not try these emergency and long-term procedures - we will
-assess them for you! You don't need to worry about a Heavenly Doctor not knowing what his or her
-actions might be. If it is too dangerous, they won't try it.
+diagnose and follow up for you! You do not need to worry about a Heavenly Doctor not knowing what his or her
+procedure might be. If it is too dangerous, they will avoid trying it.
 Try to get diagnosed, first. If your diagnostic is not "terminal", then try a therapy by
-asking GOD (who will assign a specific doctor on you) and then real help is on the way. Your illness
-will make way to better health for you.
+asking Top Doctor (accessible by God) (who will assign a specific doctor on you) and 
+then real help is on the way. 
 </p>
 
 <h1>Our Services and Products</h1>
-
+<h2>Click On These Bars to Show Products and Services</h2>
         <button class="accordion1">
             <h2>Amazing and Miraculous General Health Insurance</h2>
         </button>
         <div class="panel1">
         <p class="bold-text">An important and very critical type of health insurance: 
             <br>I GOD IT!<br> 
-            Health Insurance is for Everybody Inclusive, and is non-discriminatory - 
+            <p class="bold-text">
+                Yearly insurance coverage: USD $30 / Full coverage for anybody
+            </p>    
+            Heaven's Health Insurance is for Everybody Inclusive, and is non-discriminatory - 
             especially for those who have pre-existing conditions - everyone is able to be 
             covered. We will interact with you via spirit mechanisms, so be prepared 
-            for miracles and chronic specialist help, right in the middle of your house or your 
+            for miracles and chronic illness specialist help, right in the middle 
+            of your home or your 
             &quot;sick bed&quot;. This is a real service! Don't be shy now,
             just write an order paying your first month's insurance fee, and be prepared
-            to improve!
-        </p>
-        <p class="bold-text">
-            Yearly insurance coverage: USD $30 / Full coverage for anybody
+            to improve (following months will only be billed while we are working on
+            your condition).
         </p>
 
         <h2 class="bold-text">Emergency relief of ANY PROBLEM - $Free or paid depending on actions taken</h2>
@@ -149,40 +184,44 @@ will make way to better health for you.
         <p>Single brain cell or multiple lost repair</p>
         <p>ANYTHING THAT IS AN ISSUE (not a "tiny itch on my knee") If it is found that you need a quick fix, 
         quick med, or even a minor surgery, Top Doctor will arrive and an agreed upon 
-        amount will be taken from your bank account, without effort.</p>
+        amount will be taken from your bank account, without your effort.</p>
 
         <h2 class="bold-text">Diagnostics and checking</h2>
+        <p class="italic-text">USD $10/diagnosis or $0 if in emergency</p>
         <p>General diagnosis by the Most Knowledgeable &quot;God Doctor&quot; telling
             you if you have or don't have any issues in a general body area.</p>
+
         <p class="italic-text">USD $10/diagnosis or $0 if in emergency</p>
         <p>More specific diagnosis after any other signs of illness are told</p>
-        <p class="italic-text">USD $10/diagnosis or $0 if in emergency</p>
 
         <h2 class="bold-text">Simple, powerful, and effective cures</h2>
+        <p class="italic-text">USD $10/10 effective usages of the Magic Wand</p>
         <p>Magic Wand: Immediate anti-bacterial treatment inside/outside your outer skin,
         and all over the body with 10 passes. Done by Top Doc. With our "Magic Wand" 
         that is a high-tech body irradiating device,
         you can easily kill food poisoning (at early notice) and other infections. Guaranteed
         not to harm your body.</p>
-        <p class="italic-text">USD $10/10 effective usages of the Magic Wand</p>
+
+        <p>OMNITRON(tm) Health Button, used with special battery charging
+            <p class="italic-text">USD $45/device</p>
         <p>OMNITRON(tm) Health Button: THIS BUTTON SUMMONS THE "TOP DOCTOR" - The best front-line 
             medical support available to you.
             Everyone who wears the little "button" on top of your
-            existing belly button attains a microphone that connects to the Doctor, while 
-            also sensing some problems in your body or brain to diagnose. As soon
+            existing belly button attains a microphone that connects to the Doctor, and it 
+            also senses some problems in your body or brain to diagnose. As soon
             as you hear the button screeching, with different sounds for different body problems,
              you need to immediately press the Alarm! Button on the front of your belly button. 
              A Doctor will either give you free, immediate
             attention (with further help given by other doctors), or inform you that things are 
             alright, and the OMNITRON will play a more soothing sound.
         </p>
-        <p>OMNITRON(tm) Health Button, used with special battery charging
-        <p class="italic-text">USD $45/device</p>
+
+        <p class="italic-text">USD $150/invisible necklace</p>
         <p>TOXITRON(tm) Microwave-emitting Toxin Killer "Invisible" Necklace, used with special battery charging
         <p>Prevent the build-up of toxins in the body caused by smoking, vaping, toxic
         foods (charred meat), toxic drinks, and other causes of bad substances and free radicals in the body.
         Does not affect one's brain except by the content of one's blood.</p>
-        <p class="italic-text">USD $150/invisible necklace</p>
+
         <img width="100%" height="13" src="images/blue-divider.png">
         </div>
 
@@ -190,24 +229,28 @@ will make way to better health for you.
             <h2>EMERGENCIES</h2>
         </button>
         <div class="panel1">
+        <p class="italic-text">
+            USD $10 / Speed-healing attempt
+        </p>
         <p>
             SPEED-HEALING - After receiving an injury, speed healing can be maintained for
             a long time in the goal of stopping bleeding, healing skin and muscles, 
             and then restoring the original look of your body.  
         </p>
-        <p class="italic-text">
-            USD $10 / Speed-healing attempt
-        </p>
+
         <h2 class="bold-text"></h2>
+        <p class="italic-text">$Free</p>
         <p>STIMPACK of artificial platelet cells in the bloodstream (useful when someone is injured,
          for example)</p>
-        <p class="italic-text">$Free</p>
+
+        <p class="italic-text">$2/check and doctor's explanation</p>
         <p>CHECKING Vitals: check heart rate, breathing normality, blood pressure, blood
             counts of various blood aspects</p>
-            <p class="italic-text">$2/check and doctor's explanation</p>
+
+        <p class="italic-text">USD $2/doctor's check and condition analysis</p>
         <p>CHECK for integrity of various organs e.g. whether the kidney has failed, or liver, or lungs, or brain injured etc.
         </p>
-        <p class="italic-text">USD $2/doctor's check and condition analysis</p>
+
         <img width="100%" height="13" src="images/blue-divider.png">
         </div>
 
@@ -216,25 +259,33 @@ will make way to better health for you.
         </button>
         <div class="panel1">
         <h2 class="bold-text"></h2>
+        <p class="italic-text">
+            USD $5/full analysis and cure of any of various ailments>
+        </p>
         <p>Special science: 
             Reveal and Remove pain and discomforting nerves and any other bodily
             structures from anywhere in your body (usually close to the skin or on the skull)
         </p>
+
         <p class="italic-text">
-            USD $5/full analysis and cure of any of various ailments>
+            USD $2/check and if passed, both eyes back to near-20/20, if healthy, 
+            estimated to last 1 years (no maximum number of times!)
         </p>
         <p>Re-Up-Take of Sight Clarity within a single day</p>
         <p>A special doctor service for your eyes only for when it is seemingly worse in the day
         or night, and after a long period of blurred sight.
         An opthmamologist can restore your eye degree and make your eye refreshed and clear again.
         No need for new glasses!</p>
-        <p class="italic-text">
-            USD $2/check and if passed, both eyes back to 20/20, if healthy estimated to last 5 years (maximum 2 times in one lifetime!)
-        </p>
-        <p>ELDERLY REPAIR - Instant fixes to SENILITY, INSANITY, LUNACY, and DEMENTIA within 
-        45 days of onset (Remind Yourself!)</p>
+
         <p class="italic-text">
             USD $150/elderly brain repair. Don't let it happen twice!
+        </p>
+        <p>ELDERLY REPAIR - Quick fixes to SENILITY, INSANITY, LUNACY, and DEMENTIA within 
+        45 days of onset (Remind Yourself!) It also has some effect after full settling-in of
+        the condition</p>
+
+        <p class="italic-text">
+            USD $200 / Organ transplanted - 98% Success rate
         </p>
         <p>
             PLASTIC ORGANS - We produce and manufacture amazing and miraculous plastic organs
@@ -243,9 +294,7 @@ will make way to better health for you.
             expensive! Rather it is such a miracle that you ought to be highly thankful
             to the Doctor for his service.
         </p>
-        <p class="italic-text">
-            USD $200 / Organ transplanted - 98% Success rate
-        </p>
+
         <!-- TO BE ENABLED IN 2-3 YEARS FROM 2020 WHEN CHINESE MEDICINE SUPPORT SERVICES GOD ARRIVES
         <p>
 
@@ -253,81 +302,98 @@ will make way to better health for you.
         <p class="italic-text">
             USD $100 / Oral pills regimen per year - 99% Success rate
         </p>-->
-        <p>Restoral of lost sensation - When at old age you start to lose your hearing, your sight,
-         or any feeling that comes as an obvious result of old age, or even while you're young,
-         we have the service of restoring your brain transmitters.
-        </p>
         <p class="italic-text">
             USD $50/full restoral of every sensation, with the exception of if you are completely 
             FINE.
         </p>
-        <p>Removal of heart cholesterol (to prevent heart attacks)</p>
+        <p>Restoral of lost sensation - When at old age you start to lose your hearing, your sight,
+         or any feeling that comes as an obvious result of old age, or even while you're young,
+         we have the service of restoring your brain transmitters.
+        </p>
+
         <p class="italic-text">
             USD $10/procedure
         </p>
-        <p>Assurance of Fat Removal by Real Exercise</p>
+        <p>Removal of heart cholesterol (to prevent heart attacks)</p>
+
         <p class="italic-text">
             USD $80/full assurance by beauty
         </p>
-        <p>Removal of diseased tissue and possible replacement of various areas of tissue.</p>
+        <p>Assurance of Fat Removal by Real Exercise</p>
+
         <p class="italic-text">
             USD $20/procedure
         </p>
-        <p>Shoulder and back pain cure</p>
+        <p>Removal of diseased tissue and possible replacement of various areas of tissue.</p>
+
         <p class="italic-text">
             USD $25/cure
         </p>
-        <p>Complete restructuring of broken lung contents because of smoking, vaping, Juuling, or pollution
-        </p>
+        <p>Shoulder and back pain cure</p>
+
         <p class="italic-text">
             USD $50/procedure
         </p>
-        <p>Blood improvement of all counts necessary to improve (ANEMIC TO ENERGETIC)</p>
+        <p>Complete restructuring of broken lung contents because of smoking, vaping, Juuling, or pollution
+        </p>
+
         <p class="italic-text">
             USD $50/improvement for one-off blood improvement with 1 week continuous monitoring
+        </p>
+        <p>Blood improvement of all counts necessary to improve (ANEMIC TO ENERGETIC)</p>
+
+        <p class="italic-text">
+            USD $10/cell or cell group (we will remove every cell related to a brain issue)
         </p>
         <p>
             Unhealthy brain cell removal: e.g. dementing or damage, epilepsy, panic attacks, hallucinations
         </p>
-        <p class="italic-text">
-            USD $10/cell or cell group (we will remove every cell related to a brain issue)
-        </p>
-        <p>Brain damage complete brain restoration</p>
+
         <p class="italic-text">
             USD $50/brain restoration
         </p>
-        <p>Brain repair - instant fixing of big "disasters" of the brain's physical kind</p>
+        <p>Brain damage complete brain restoration</p>
+
         <p class="italic-text">
             USD $10/brain repair
         </p>
-        <p>Replacement by mechanical parts, where available, e.g. kidney, liver, diaphragm etc.</p>
+        <p>Brain repair - instant fixing of big "disasters" of the brain's physical kind</p>
+
         <p class="italic-text">
             USD $100-$500/organ and procedure (multiple doctoral sessions)
         </p>
-        <p>Cure to HIV, AIDS and other STD's, as available</p>
+        <p>Replacement by mechanical parts, where available, e.g. kidney, liver, diaphragm etc.</p>
+
         <p class="italic-text">
             USD $40/complete diagnostics and cure
         </p>
-        <p>Cure to multiple cancers</p>
+        <p>Cure to HIV, AIDS and other STD's, as available</p>
+
         <p class="italic-text">
             USD $20/all cancers, in genes or not
         </p>
-        <p>Cure to diabetes (guaranteed)</p>
+        <p>Cure to multiple cancers</p>
+
         <p class="italic-text">
             USD $30/illness partial cured, or money back
         </p>
+        <p>Cure to diabetes (guaranteed)</p>
+
+        <p class="italic-text">
+            USD $10/cure
+        </p>
         <p>Immediate cure to blood pressure and high heart rate</p>
+
         <p class="italic-text">
             USD $10/cure
         </p>
         <p>Super testostorone or estrogen amount boost (INCREASE YOUR VITAL ENERGY AT A MOMENT!)</p>
-        <p class="italic-text">
-            USD $10/cure
-        </p>
-        <p>Super Pain Relief! Cut your painful nerves on-location, risk-free</p>
+
         <p>
             USD $5/cutting treatment - reversible!
         </p>
+        <p>Super Pain Relief! Cut your painful nerves on-location, risk-free</p>
+
         <img width="100%" height="13" src="images/blue-divider.png">
         </div>
 
@@ -355,7 +421,7 @@ will make way to better health for you.
             level in the blood ASAP at the doctor or hospital ASAP after getting the 
             report over email. Uric acid can be solved for anybody!
         </p>
-        <p>Specialist Rejuvenation Doctor Work to Resupply Good Energy to people's souls 
+        <p>Specialist Rejuvenation Doctor Working to Resupply Good Energy to people's souls 
         </p>
         <p class="italic-text">
             USD $200/order, If you think you are feeling tawdry all of a sudden, or have lost 
@@ -372,6 +438,25 @@ will make way to better health for you.
             Free
         </p>
         <img width="100%" height="13" src="images/blue-divider.png">
+        </div>
+
+        <button class="accordion1">
+            <h2>Mental Experience</h2>
+        </button>
+        <div class="panel1">
+        <p>
+        <span class="bold-text">Brightening</span> of mental activities
+        </p>
+        <p>Increased Brain Brightness</p>
+        <p>In order for this treatment to work, one must accept a "gainful stare" when
+            offered one. This will actually improve the brightness of someone's brain, or
+            concentration or even other effects. We have mastery of what kinds of 
+            brightness you will need. When you &quot;blink&quot;, it's all over. 
+            Then try again! 
+        </p>
+        <p class="italic-text">
+            USD $100 - full comprehensive treatment
+        </p>
         </div>
 
         <button class="accordion1">
@@ -432,24 +517,6 @@ will make way to better health for you.
         <img width="100%" height="13" src="images/blue-divider.png">
         </div>
 
-        <button class="accordion1">
-            <h2>Mental Experience</h2>
-        </button>
-        <div class="panel1">
-        <p>
-        <span class="bold-text">Brightening</span> of mental activities
-        </p>
-        <p>Increased Brain Brightness</p>
-        <p>In order for this treatment to work, one must accept a "gainful stare" when
-            offered one. This will actually improve the brightness of someone's brain, or
-            concentration or even other effects. We have mastery of what kinds of 
-            brightness you will need. When you &quot;blink&quot;, it's all over. 
-            Then try again! 
-        </p>
-        <p class="italic-text">
-            USD $100 - full comprehensive treatment
-        </p>
-        </div>
     <div class="order-form">
         <img width="100%" height="13"  src="images/blue-divider.png">
         <a href="Digital Order Form for Heaven.docx">Sample Word Docx Order Form</a><br>
@@ -465,7 +532,7 @@ will make way to better health for you.
         Order: Blood improvement for Mom, performed in 2 days<br>
         $30/improvement<br>
         May not always resolve perfectly!<br>
-        My phone for SMS: (411)555-1111<br>
+        My email for follow-up: mybloodisbad@sobbing.com<br>
         Other instructions<br>
         $30.00 USD<br>
         Payable by Wells Fargo Bank Credit Card set on table under Mom's name<br>

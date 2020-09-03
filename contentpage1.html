@@ -17,44 +17,75 @@
                 <div class="title-middle">Trading Off for a Good Life</div>
                 <div id="rt-prices">
                     <!-- "Button" to Trigger/Open The Menu -->
-                    <div class="pd" onmouseover="showmenu()" onmouseout="hidemenu()">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="pd">
+                        <span class="five-spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         <img src="images/hamburger.png"  class="title-right" alt="" id="hamburger">
                         <ul class="pdmenu">
                             <li ><a  href="index.html">Trading Off home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a   href="contentpage1.html">Beauty Treatments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a   href="contentpage2.html">Body Enhancements&nbsp;&nbsp;&nbsp;</a></li>
                             <li ><a   href="contentpage3.html">Medical Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                            <li ><a  href="contentpage4.html">Miscellaneous Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                            <li ><a  href="contentpage4.html">Miscellaneous Services</a></li>
                         </ul>
                     </div>
                 </div>
         </nav>
-
+        <div id="myModal1" class="modal"></div>   
         <script>
+            let hamburgerMenu = document.getElementsByClassName("pd")[0];
+            let menuOpen = false;
+            //var backgr = document.querySelector("pdmenubackground");
+            let backgr = document.getElementById("myModal1");
+            let bg1 = document.querySelector("background");
+
+            //specially click on hamburger button on mobile devices
+            hamburgerMenu.addEventListener("click", function() {
+                if (menuOpen===true){
+                    menuOpen = false;
+                    hidemenu();
+                } else {
+                    menuOpen = true;
+                    showmenu();
+                }
+            });
+    
+            hamburgerMenu.addEventListener("mouseout", function() {
+                if (menuOpen===true) {
+                    hidemenu();
+                }
+            });
+    
+            hamburgerMenu.addEventListener("mouseover", function() {
+                if (menuOpen===false) {
+                    showmenu();
+                }
+            });
+            
+            backgr.addEventListener("click", function() {
+                hidemenu();
+            });
+
             function showmenu() {
-                let pdmenu = document.getElementsByClassName("pdmenu")
-                pdmenu[0].style.clip= "auto"
-                pdmenu[0].style.opacity= "1"
-                pdmenu[0].style.transform= "translateY(0) scaleY(1)"
-                pdmenu[0].style.zIndex= "1"
-                document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
-                document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
-                document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
-                document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
+                backgr.style.display = "block";
+                backgr.style.zIndex = 0; 
+                let pdmenu = document.getElementsByClassName("pdmenu");
+                pdmenu[0].style.clip= "auto";
+                pdmenu[0].style.opacity= "1";
+                pdmenu[0].style.transform= "translateY(0) scaleY(1)";
+                pdmenu[0].style.zIndex= 1;
+                menuOpen=true;
             }
             function hidemenu() {
-                let pdmenu = document.getElementsByClassName("pdmenu")
-                pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)"
-                pdmenu[0].style.opacity= "0.0"
-                pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)"
-                pdmenu[0].style.zIndex= "-1"
-                document.getElementsByClassName("pdmenu").style.clip = pdmenu[0].style.clip
-                document.getElementsByClassName("pdmenu").style.opacity = pdmenu[0].style.opacity
-                document.getElementsByClassName("pdmenu").style.transform = pdmenu[0].style.transform
-                document.getElementsByClassName("pdmenu").style.zIndex = pdmenu[0].style.zIndex
+                let pdmenu = document.getElementsByClassName("pdmenu");
+                pdmenu[0].style.clip= "rect(1px, 1px, 1px, 1px)";
+                pdmenu[0].style.opacity= "0.0";
+                pdmenu[0].style.transform= "translateY(-10px) scaleY(0.5)";
+                pdmenu[0].style.zIndex= 0;
+                backgr.style.display = "none";
+                backgr.style.zIndex = 0;
+                menuOpen=false; 
             }
-
+            
         </script>
 
         <div class="top-border"></div>
@@ -77,7 +108,7 @@
         <p>
 Regarding the rules: firstly, orders can be written and processed, but not 
 finalized until you realize any change in your life. If the change is not accepted 
-at your final discretion, we will confirm that you want to get a full 98% or 99% 
+at your late discretion, we will confirm that you want to get a full 98% or 99% 
 of your money back, and will with much certainty be returned.
         </p>
 <p>
@@ -100,6 +131,7 @@ There is one good way to confirm your order:
        We will send any news about your order and new prices to your email inbox.</p>
         <p>Prices on that site and this one are due to change without notice.</p>
 
+        <h2>Click On These Bars to Show Products and Services</h2>
 <button class="accordion1">
     <h2 >Beauty Services and Products</h2>
 </button>
@@ -122,9 +154,9 @@ There is one good way to confirm your order:
         Anti-aging is different from clearing spots, and is significantly more powerful.
         Where clearing spots is about removing blemishes, anti-aging will literally
         make you look younger, no cosmetics, with skin transformation and improved coloration, and
-        less saggy cheeks and bags. This is a very
+        less saggy cheeks and bags. 98% Guaranteed by Beautyview (tm) 3D preview, this is a very
         standard procedure that anyone can order. The service is all-face, and does
-        not affect body muscles but can change and improve your face flesh and skin very well.
+        not affect body muscles but can change and improve your face flesh and skin acutely.
         Takes 6 days.
     </p>
     <p class="bold-text">
@@ -135,7 +167,8 @@ There is one good way to confirm your order:
         This treatment need only be bought once every 20 years, since it will
         freeze aging - most importantly in the face area for that length of time.
         It is simply magic, a miracle that will make everyone you know be amused.
-        They will be amazed by it. Make all your family and friends buy this! Takes 6 days.
+        They will be amazed by it. Make all your family and friends buy this! 99% Guaranteed 
+        by the Beautyview (tm). Takes 6 days.
     </p>
     <p class="bold-text">
         Long-term radiant beauty: EBU Eternal Beauty Updating<br>
@@ -218,7 +251,7 @@ There is one good way to confirm your order:
     Order: Fountain of Youth for Mom, lasting 20 years<br>
     $300/treatment<br>
     May not always resolve perfectly!<br>
-    My phone for SMS: (411)555-1111<br>
+    My email for follow-up: brightandhappygirl@looks.com<br>
     Other instructions<br>
     $300.00 USD<br>
     Payable by Wells Fargo Bank Credit Card set on table under Mom's name<br>

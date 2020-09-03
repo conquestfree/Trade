@@ -1,4 +1,4 @@
-@import url('./images/BalooTamma2-Regular.ttf');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
 
 body{
     margin:0;
@@ -45,7 +45,7 @@ nav{
 .subheader{
     margin: 2rem 0 2rem 1rem;
     font-size: 1.4rem;
-    font-family: 'BalooTamma2-Regular', sans-serif;
+    font-family: 'Baloo Tamma 2', sans-serif;
 }
 
 .links-container{
@@ -219,13 +219,6 @@ nav{
     max-width: 400px;
     font-family: 'Helvetica', sans-serif;
 }
-/*#hamburger{
-    margin: 0;
-    padding: 0;
-    width:30;
-    height:30;
-      right:0;
-}*/
 .title-left{
     height: 30px;
     width: 40px;
@@ -264,59 +257,7 @@ nav{
     margin-top:0;
     margin:0;
 }
-.menu-blocks{
-    display:block;
-}
-  /* Top-level menu items*/
- /* .menu {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    text-decoration: none;
-    list-style: none;
-    margin-bottom: 1rem;
-  }
-*/
 
-
-#menu-nav-toggle-responsive{
-    display: none;
-}
-
-.menuroll{
-    display: none;
-    clip: rect(1px, 1px, 1px, 1px);
-    transform: "translateY(-10px) scaleY(0.5)";
-    z-index: "-1";
-    max-height : "0";
-
-    background-color: rgb(255,180,180);
-    color: black;
-}
-.menuroll > li > a:hover{
-    list-style:none;
-    background-color:rgb(255, 125, 125);
-}
-.menuroll > li{
-    list-style:none;
-    text-decoration: none;
-}
-.menuroll > li > a{
-    text-decoration:none;
-}
-.menuroll > li > a:visited{
-    list-style:none;
-    text-decoration: none;
-    color: blue;
-}
-
-#pdmenu-nav-toggle-responsive{
-    display: block;
-/*    #rt-prices{
-        display: block;
-    }
-*/
-}
 
 .pd{
     
@@ -374,41 +315,7 @@ li{
     font-size: 1.2rem;
     line-height: 1.5rem;
 }
-/*
-#rollmenu{
-    transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
-    transform: translateY(0px) scaleY(1);
-    transform-origin: top;
-}
-#unrollmenu{
-    transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
-    transform: translateY(0px) scaleY(0.5);
-    transform-origin: top;   
-}
-*/
-/*
-.pdmenulink{
-    background-color: inherit;
-    color: rgb(0,0,255);
-}/*
-.pdmenulink:hover{
-    color: rgb(50,50,255);
-}
-.pdmenulink:visited{
-    color: rgb(0,0,255);
-}*/
 
-/* Sub-menu styles when shown
-.title-right:hover > .pdmenu {
-  clip: auto;
-  opacity: 1;
-  transform: translateY(0) scaleY(1);
-  z-index: 1;
-}
-.menu a{
-    &:hover{
-    }
-}*/
 
 /* The Modal (background) */
 .modal {
@@ -516,14 +423,6 @@ li{
         display: none;
     }
 
-    .pdmenubackground {    
-
-    }
-
-    .menuroll{
-        display: none;
-    }
-
     .top-bg{
         max-width: 91vw;
         width:100%;
@@ -536,7 +435,7 @@ li{
         font-family: 'Helvetica', sans-serif;
         font-size: 1.5rem;
         font-weight: 700;
-        max-width: 91vw%;
+        max-width: 91vw;
         width: 100%;
         text-shadow: 3px #000000;
         overflow: auto;
@@ -545,7 +444,7 @@ li{
     .subheader{
         margin: 2rem 0 0 1rem;
         font-size: 1.0rem;
-        font-family: 'BalooTamma2-Regular', sans-serif;
+        font-family: 'Baloo Tamma 2', sans-serif;
     }
 
     .pdmenubackground {
